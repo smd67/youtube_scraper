@@ -1,0 +1,13 @@
+
+services:
+  youtube-scrapper-frontend: # Name of the frontend service
+    build: frontend/youtube-scrapper
+    ports: 
+      - "5173:80"
+    
+  youtube-scrapper-backend: # Name of the backend service
+    build: backend/src
+    environment:
+          DEVELOPER_KEY: ${DEVELOPER_KEY}
+    ports:
+      - "8000:8000"
