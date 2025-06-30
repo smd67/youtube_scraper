@@ -1,5 +1,5 @@
-# YouTube Channel Reccomender
-This is a simple project that will reccomend YouTube channels for you based on a search string.
+# YouTube Channel Recommender
+This is a simple project that will recommend YouTube channels for you based on a search string.
 
 Videos are queried by a search string and evaluated on the following criteria.
 
