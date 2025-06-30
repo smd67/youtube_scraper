@@ -22,6 +22,7 @@ import re
 from fastapi import FastAPI
 from typing import Union
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from download import download
 
@@ -31,7 +32,19 @@ class Query(BaseModel):
     """
     query_string: str
 
+origins = [
+    "*"
+]
+
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/query/")
 def do_query(query: Query) -> JSONResponse:
@@ -49,7 +62,10 @@ def do_query(query: Query) -> JSONResponse:
         A JSON object 
     """
     df = main(query.query_string)
-    json_string = df.to_json(orient="records") # 'records' is a common format
+    json_string = df.to_dict(orient="records") # 'records' is a common format
+    print("=================")
+    print(json_string)
+    print("=================")
     return JSONResponse(content=json_string)
 
 
@@ -69,6 +85,7 @@ def extract_search_data(instance: googleapiclient.discovery.Resource, query: str
     str
         The json data from the response.
     """
+    response = {}
     try:
         request = instance.search().list(
             part="snippet",
@@ -76,8 +93,8 @@ def extract_search_data(instance: googleapiclient.discovery.Resource, query: str
             maxResults=250
         )
         response = request.execute()
-    except googleapiclient.errors.HttpError:
-        pass
+    except googleapiclient.errors.HttpError as e:
+        print(f"Error: unexpected exception e={e}")
     return response
 
 def extract_comment_thread_data(instance: googleapiclient.discovery.Resource, search_data: dict) -> dict:
@@ -309,7 +326,7 @@ def main(query: str):
     api_key = os.environ.get('DEVELOPER_KEY')
 
     download()
-    
+
     youtube = googleapiclient.discovery.build(
         api_service_name, api_version, developerKey = api_key)
     
