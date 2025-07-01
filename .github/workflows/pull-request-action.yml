@@ -48,4 +48,5 @@ jobs:
           # flake8_args: "--max-line-length=80"
           # plugins: "flake8-black"
           max-line-length: "80"
+          path: "backend/src"
       
