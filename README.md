@@ -11,20 +11,19 @@ Videos are queried by a search string and evaluated on the following criteria.
 The project is divided into frontend and backend code.
 
 ## Frontend
-The frontend is implemented using Javascript and Vue. It runs in a docker container. The frontend implements the user interface only and relies on REST caslls
-to the backend to access data.
+The frontend is implemented using Javascript and Vue. It runs in a docker container. The frontend implements the user interface only and relies on REST calls to the backend to access data.
 
 
 ## Backend
 The backend code is written in python and uses Fast API to implement a REST endpoint. The backend also runs in a Docker container. The backend code uses the 
-google-api-python-client package to query the YouTube data API and access information about YouTube videos. It uses the NLTK library to do sentiment analysis and 
-fuzzy-wuzzy to determine relevance of a channel.
+google-api-python-client package to query the YouTube data API and access information about YouTube videos. It uses the NLTK library to do sentiment analysis and fuzzy-wuzzy to determine relevance of a channel.
 
 ## How to build and run
 This project uses docker compose to build and deploy the frontend and backend containers. The DEVELOPER_KEY is and environmental variable for your YouTube 
 API key.
 
 ```
+export DEVELOPER_KEY=<your api key>
 docker compose build --build-arg DEVELOPER_KEY=$DEVELOPER_KEY
 docker compose up
 ```
