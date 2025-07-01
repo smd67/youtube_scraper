@@ -15,7 +15,6 @@ import argparse
 import os
 import re
 
-from tabulate import tabulate
 import googleapiclient.discovery
 import pandas as pd
 from download import download
@@ -25,8 +24,10 @@ from fastapi.responses import JSONResponse
 from fuzzywuzzy import fuzz
 from nltk.sentiment import SentimentIntensityAnalyzer
 from pydantic import BaseModel
+from tabulate import tabulate
 
 # 01234567890123456789012345678901234567890123456789012345678901234567890123456789012345
+
 
 class Query(BaseModel):
     """

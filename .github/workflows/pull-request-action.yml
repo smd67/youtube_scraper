@@ -21,25 +21,20 @@ jobs:
         with:
           python-version: '3.9.21' # Specify your desired Python version
 
-      - name: Install black
-        run: pip install black
+      - name: Install tools
+        run: pip install black isort flake8
 
       - name: Run black
-        uses: rickstaa/action-black@v1
+        uses: psf/black@stable
         with:
-          black_args: "--line-length 80 backend/src"
-
-      - name: Install isort
-        run: pip install isort
+          options: "--line-length 80"
+          src: "backend/src"
 
       - name: Run isort
         uses: isort/isort-action@master
         with:
             configuration: "--profile black"
             sort-paths: "backend/src"
-
-      - name: Install flake8
-        run: pip install flake8 # Install flake8
 
       - name: Run flake8
         uses: py-actions/flake8@v2 # Action to run flake8
