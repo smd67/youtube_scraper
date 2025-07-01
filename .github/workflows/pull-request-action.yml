@@ -1,0 +1,49 @@
+name: Pull Request Action
+on:
+  push:
+    paths:
+      - '*.py'
+  pull_request:
+    paths:
+      - '*.py'
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Action to checkout your repository code
+
+      - name: Set up Python
+        uses: actions/setup-python@v5 # Action to set up Python
+        with:
+          python-version: '3.9' # Specify your desired Python version
+
+      - name: Install black
+        run: pip install black
+
+      - name: Run black
+        uses: rickstaa/action-black@v1
+        with:
+          black_args: "--line-length 80 backend/src"
+
+      - name: Install isort
+        run: pip install isort
+
+      - name: Run isort
+        uses: isort/isort-action@master
+        with:
+            configuration: "--profile black"
+
+      - name: Install flake8
+        run: pip install flake8 # Install flake8
+
+      - name: Run flake8
+        uses: py-actions/flake8@v2 # Action to run flake8
+        with:
+          # Optional: Specify flake8 options or plugins here
+          flake8_args: "--max-line-length=120 backend/src"
+          # plugins: "flake8-black"
+      

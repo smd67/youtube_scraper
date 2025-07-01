@@ -2,8 +2,9 @@
 Small helper script to download nltk libraries.
 """
 
-import nltk
 import ssl
+
+import nltk
 
 
 def download():
@@ -13,8 +14,9 @@ def download():
         pass
     else:
         ssl._create_default_https_context = _create_unverified_https_context
-    nltk.download('vader_lexicon')
-    nltk.download('wordnet')
+    nltk.download("vader_lexicon")
+    nltk.download("wordnet")
+
 
 if __name__ == "__main__":
     download()
