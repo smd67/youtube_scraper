@@ -28,7 +28,7 @@ jobs:
         run: black --line-length 80 backend/src
 
       - name: Run isort
-        run: isort --profile black
+        run: isort --profile black backend/src
 
       - name: Run flake8
         run: flake8 --max-line-length=80 backend/src
