@@ -25,10 +25,10 @@ jobs:
         run: pip install black isort flake8
 
       - name: Run black
-        run: black --check --line-length 80 backend/src
+        run: black --check --verbose --line-length 80 backend/src
 
       - name: Run isort
-        run: isort --profile black backend/src
+        run: isort --check --verbose --profile black backend/src
 
       - name: Run flake8
         run: flake8 --max-line-length=80 backend/src
