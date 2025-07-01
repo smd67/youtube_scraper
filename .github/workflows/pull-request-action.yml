@@ -36,6 +36,7 @@ jobs:
         uses: isort/isort-action@master
         with:
             configuration: "--profile black"
+            sort-paths: "backend/src"
 
       - name: Install flake8
         run: pip install flake8 # Install flake8
