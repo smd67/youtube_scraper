@@ -26,6 +26,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 from pydantic import BaseModel
 from tabulate import tabulate
 
+
 class Query(BaseModel):
     """
     Pydantic representation of a query.
