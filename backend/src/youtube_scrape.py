@@ -28,7 +28,6 @@ from tabulate import tabulate
 
 # 01234567890123456789012345678901234567890123456789012345678901234567890123456789012345
 
-
 class Query(BaseModel):
     """
     Pydantic representation of a query.

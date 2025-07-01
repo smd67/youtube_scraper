@@ -25,23 +25,11 @@ jobs:
         run: pip install black isort flake8
 
       - name: Run black
-        uses: psf/black@stable
-        with:
-          options: "--line-length 80"
-          src: "backend/src"
+        run: black --line-length 80 backend/src
 
       - name: Run isort
-        uses: isort/isort-action@master
-        with:
-            configuration: "--profile black"
-            sort-paths: "backend/src"
+        run: isort --profile black
 
       - name: Run flake8
-        uses: py-actions/flake8@v2 # Action to run flake8
-        with:
-          # Optional: Specify flake8 options or plugins here
-          # flake8_args: "--max-line-length=80"
-          # plugins: "flake8-black"
-          max-line-length: "80"
-          path: "backend/src"
+        run: flake8 --max-line-length=80 backend/src
       
