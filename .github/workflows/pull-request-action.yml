@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
+  static-analysis:
     runs-on: ubuntu-latest
 
     steps:
@@ -44,6 +44,6 @@ jobs:
         uses: py-actions/flake8@v2 # Action to run flake8
         with:
           # Optional: Specify flake8 options or plugins here
-          flake8_args: "--max-line-length=120 backend/src"
+          flake8_args: "--max-line-length=120"
           # plugins: "flake8-black"
       
