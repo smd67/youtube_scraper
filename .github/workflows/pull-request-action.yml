@@ -44,6 +44,7 @@ jobs:
         uses: py-actions/flake8@v2 # Action to run flake8
         with:
           # Optional: Specify flake8 options or plugins here
-          flake8_args: "--max-line-length=120"
+          # flake8_args: "--max-line-length=80"
           # plugins: "flake8-black"
+          max-line-length: "80"
       
