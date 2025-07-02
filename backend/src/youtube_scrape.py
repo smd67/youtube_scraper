@@ -91,7 +91,7 @@ def extract_search_data(
     """
     response = {}
     try:
-        request = instance.search().list( # type: ignore
+        request = instance.search().list(  # type: ignore
             part="snippet", q=query, maxResults=250
         )
         response = request.execute()
@@ -124,7 +124,7 @@ def extract_comment_thread_data(
         video_id = item.get("id", {}).get("videoId")
         if video_id:
             try:
-                request = instance.commentThreads().list( # type: ignore
+                request = instance.commentThreads().list(  # type: ignore
                     part="id, replies, snippet", videoId=video_id
                 )
                 response = request.execute()
@@ -159,9 +159,9 @@ def extract_channel_data(
     for item in search_data.get("items", []):
         channel_id = item.get("snippet", {}).get("channelId")
         if channel_id not in channel_ids:
-            request = instance.channels().list( # type: ignore
+            request = instance.channels().list(  # type: ignore
                 part="id, statistics, snippet", id=channel_id
-            ) 
+            )
             response = request.execute()
             data["items"].append(response)
             channel_ids.add(channel_id)
@@ -398,7 +398,11 @@ def main(query: str):
     channel_data = extract_channel_data(youtube, search_data)
 
     df = transform_data(query, comment_thread_data, channel_data)
-    print(tabulate(df, headers=df.columns.tolist(), tablefmt="grid")) # type: ignore
+    print(
+        tabulate(
+            df, headers=df.columns.tolist(), tablefmt="grid"  # type: ignore
+        )
+    )
     return df
 
 
