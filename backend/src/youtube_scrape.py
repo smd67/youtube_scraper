@@ -91,7 +91,7 @@ def extract_search_data(
     """
     response = {}
     try:
-        request = instance.search().list(
+        request = instance.search().list( # type: ignore
             part="snippet", q=query, maxResults=250
         )
         response = request.execute()
@@ -118,13 +118,13 @@ def extract_comment_thread_data(
     list
         A list of comment threads.
     """
-    data = {}
+    data: dict = {}
     data["items"] = []
     for item in search_data.get("items", []):
         video_id = item.get("id", {}).get("videoId")
         if video_id:
             try:
-                request = instance.commentThreads().list(
+                request = instance.commentThreads().list( # type: ignore
                     part="id, replies, snippet", videoId=video_id
                 )
                 response = request.execute()
@@ -153,15 +153,15 @@ def extract_channel_data(
     list
         A list of comment threads.
     """
-    data = {}
+    data: dict = {}
     data["items"] = []
     channel_ids = set()
     for item in search_data.get("items", []):
         channel_id = item.get("snippet", {}).get("channelId")
         if channel_id not in channel_ids:
-            request = instance.channels().list(
+            request = instance.channels().list( # type: ignore
                 part="id, statistics, snippet", id=channel_id
-            )
+            ) 
             response = request.execute()
             data["items"].append(response)
             channel_ids.add(channel_id)
@@ -346,15 +346,15 @@ def fuzzy_similarity(str1: str, str2: str) -> float:
 
     Returns
     -------
-    float
-        A ratio between 0 and 1 representing how similar the match is.
+    int
+        A ratio between 0 and 100 representing how similar the match is.
     """
     str1 = str1.lower()
     str2 = str2.lower()
 
     pattern_words = re.findall(r"\w+", str1)
 
-    best_ratio = 0
+    best_ratio = 0.0
     for i in range(len(str2)):
         text_words = re.findall(r"\w+", str2[i:])
         if len(text_words) < len(pattern_words):
@@ -398,7 +398,7 @@ def main(query: str):
     channel_data = extract_channel_data(youtube, search_data)
 
     df = transform_data(query, comment_thread_data, channel_data)
-    print(tabulate(df, headers=df.columns, tablefmt="grid"))
+    print(tabulate(df, headers=df.columns.tolist(), tablefmt="grid")) # type: ignore
     return df
 
 

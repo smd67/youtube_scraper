@@ -22,7 +22,7 @@ jobs:
           python-version: '3.9.21' # Specify your desired Python version
 
       - name: Install tools
-        run: pip install black isort flake8
+        run: pip install black isort flake8 mypy types-tabulate
 
       - name: Run black
         run: black --check --verbose --line-length 80 backend/src
@@ -32,4 +32,7 @@ jobs:
 
       - name: Run flake8
         run: flake8 --max-line-length=80 backend/src
+      
+      - name: Run mypy
+        run: mypy --ignore-missing-imports backend/src
       
