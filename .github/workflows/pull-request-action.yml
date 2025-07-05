@@ -22,8 +22,7 @@ jobs:
           python-version: '3.9.21' # Specify your desired Python version
 
       - name: Install tools
-        run: pip install black isort flake8 mypy types-tabulate pytest pytest-cov
-
+        run: pip install backend/src/requirements.txt
       - name: Run black
         run: black --check --verbose --line-length 80 backend/src
 
