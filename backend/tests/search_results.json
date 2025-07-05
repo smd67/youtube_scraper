@@ -1,0 +1,1709 @@
+
+[
+    {
+        "kind": "youtube#searchListResponse",
+        "etag": "M8YEr7-dtDikOEcVZOX6fckeUeY",
+        "nextPageToken": "CDIQAA",
+        "regionCode": "US",
+        "pageInfo": {
+        "totalResults": 1000000,
+        "resultsPerPage": 50
+        },
+        "items": [
+        {
+            "kind": "youtube#searchResult",
+            "etag": "FzbuN0NdqVtv-MV12hP998EuKPU",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "kkrWGVxUBZc"
+            },
+            "snippet": {
+            "publishedAt": "2025-07-02T05:52:31Z",
+            "channelId": "UCoLrcjPV5PbUrUyXq5mjc_A",
+            "title": "White Sox vs. Dodgers Game Highlights (7/1/25) | MLB Highlights",
+            "description": "White Sox vs. Dodgers full game highlights from 7/1/25 Don't forget to subscribe! https://www.youtube.com/mlb Follow us ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/kkrWGVxUBZc/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/kkrWGVxUBZc/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/kkrWGVxUBZc/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "MLB",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-07-02T05:52:31Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "bor-gtNkTPMvugfQysrqEvPW05Y",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "7ph3zrnyL8g"
+            },
+            "snippet": {
+            "publishedAt": "2025-07-02T05:53:24Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "White Sox vs. Dodgers Game Highlights (7/1/25) | MLB Highlights",
+            "description": "White Sox vs. Dodgers full game highlights from 7/1/25, presented by @76Gasoline The Los Angeles Dodgers franchise, with ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/7ph3zrnyL8g/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/7ph3zrnyL8g/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/7ph3zrnyL8g/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-07-02T05:53:24Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "HQdeOC5_RnMEEwLYyE0MqA8TvfM",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "_Tc16G94WP8"
+            },
+            "snippet": {
+            "publishedAt": "2025-07-02T05:30:12Z",
+            "channelId": "UCNEmh_EFKWAu5Bujy6QGeXw",
+            "title": "Dodgers postgame: Shohei Ohtani hopes Yoshinobu Yamamoto &amp; Andy Pages make 2025 MLB All-Star Game",
+            "description": "During a postgame interview with Kirsten Watson on SportsNet LA, Shohei Ohtani discussed his 30th home run of the season and ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/_Tc16G94WP8/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/_Tc16G94WP8/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/_Tc16G94WP8/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Dodger Blue",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-07-02T05:30:12Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "6Pt3MdmG6mZYrWdcTRpmMhjkkFo",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "wHEKUVFx7Tg"
+            },
+            "snippet": {
+            "publishedAt": "2025-07-02T03:52:34Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "That’s 30 homers for Shohei Ohtani! #dodgers #sports #losangeles",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/wHEKUVFx7Tg/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/wHEKUVFx7Tg/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/wHEKUVFx7Tg/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-07-02T03:52:34Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "uQMwgu6tKbtdFUa1A2NioHPwnVo",
+            "id": {
+            "kind": "youtube#channel",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g"
+            },
+            "snippet": {
+            "publishedAt": "2015-08-18T18:52:17Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "Los Angeles Dodgers",
+            "description": "Official YouTube account for the Los Angeles Dodgers. www.dodgers.com www.dodgerinsider.com Facebook.com/Dodgers ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://yt3.ggpht.com/ytc/AIdro_kxDKyOCPHoyrnt48eKVi92zb2LQXAjmYDeX-_Nf2gd1Vv5=s88-c-k-c0xffffffff-no-rj-mo"
+                },
+                "medium": {
+                "url": "https://yt3.ggpht.com/ytc/AIdro_kxDKyOCPHoyrnt48eKVi92zb2LQXAjmYDeX-_Nf2gd1Vv5=s240-c-k-c0xffffffff-no-rj-mo"
+                },
+                "high": {
+                "url": "https://yt3.ggpht.com/ytc/AIdro_kxDKyOCPHoyrnt48eKVi92zb2LQXAjmYDeX-_Nf2gd1Vv5=s800-c-k-c0xffffffff-no-rj-mo"
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2015-08-18T18:52:17Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "aPcoSgA536CjqxoOl1R5fqxresQ",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "KI3QjxX6a4o"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-29T22:41:40Z",
+            "channelId": "UCoLrcjPV5PbUrUyXq5mjc_A",
+            "title": "Dodgers vs. Royals Game Highlights (6/29/25) | MLB Highlights",
+            "description": "Dodgers vs. Royals full game highlights from 6/29/25 Don't forget to subscribe! https://www.youtube.com/mlb Follow us elsewhere ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/KI3QjxX6a4o/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/KI3QjxX6a4o/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/KI3QjxX6a4o/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "MLB",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-29T22:41:40Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "tHa9WDtHSV-LfreEXjjtGfHBw9g",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "mP16AhzaKtU"
+            },
+            "snippet": {
+            "publishedAt": "2025-07-02T05:47:32Z",
+            "channelId": "UC5JV2g0vhv9_s2tHZtucYlQ",
+            "title": "Shohei Ohtani Reacts to Hitting His 30th Homer, Yamamoto Dominates, Michael Kopech Injured &amp; More!",
+            "description": "MLB Insider Reveals Dodgers Trade Deadline Plan, Big Injury Update, 5 Outfielder Trades & More! Buy our Yamamania shirt ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/mP16AhzaKtU/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/mP16AhzaKtU/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/mP16AhzaKtU/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Dodgers Nation",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-07-02T05:47:32Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "nA7XuJGwPLETp6sRldiFZJQ5ZR0",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "ppkJjm-kdY4"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-29T00:04:25Z",
+            "channelId": "UCoLrcjPV5PbUrUyXq5mjc_A",
+            "title": "Dodgers vs. Royals Game Highlights (6/28/25) | MLB Highlights",
+            "description": "Dodgers vs. Royals full game highlights from 6/28/25 Don't forget to subscribe! https://www.youtube.com/mlb Follow us elsewhere ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/ppkJjm-kdY4/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/ppkJjm-kdY4/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/ppkJjm-kdY4/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "MLB",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-29T00:04:25Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "ix2qTwudVPYz_aVwTHs7zVMhZag",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "yeNPmK7DC1I"
+            },
+            "snippet": {
+            "publishedAt": "2025-07-02T05:25:28Z",
+            "channelId": "UC_tgjd_DzC5mUp69ZyV3ZjQ",
+            "title": "Los Angeles Dodgers 🆚  Chicago White Sox 🔴 EN VIVO (01/7/25)  🔴⚾⚾",
+            "description": "Los Angeles Dodgers Vs Chicago White Sox EN VIVO (01/7/25) Juego de pelota entre dogers vs Chicago hoy Live Ohtani, #live ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/yeNPmK7DC1I/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/yeNPmK7DC1I/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/yeNPmK7DC1I/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Barberlike",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-07-02T05:25:28Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "57klMAbmVp7AhzmOXZG8S_sIQcw",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "2J3Y6iEBVCs"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-28T03:47:17Z",
+            "channelId": "UCqQo7ewe87aYAe7ub5UqXMw",
+            "title": "Los Angeles Dodgers vs Kansas City Royals - FULL GAME HIGHLIGHTS | June 27, 2025 MLB Season",
+            "description": "THUNDER CHAMPIONSHIP MERCH https://shop.houseofhighlights.com/collections/nba-champions-2025 ⛽ SUB TO HOUSE OF ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/2J3Y6iEBVCs/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/2J3Y6iEBVCs/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/2J3Y6iEBVCs/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "House of Highlights",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-28T03:47:17Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "hGBN7GTjyQ1gP5CtzlWP7_fofBs",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "AkYBrhXiT-w"
+            },
+            "snippet": {
+            "publishedAt": "2025-07-01T20:44:24Z",
+            "channelId": "UC5JV2g0vhv9_s2tHZtucYlQ",
+            "title": "MLB Insider Reveals Dodgers Trade Deadline Plan, Big Injury Update, 5 Outfielder Trades &amp; More!",
+            "description": "Buy our \"BIG DOG\" Andy Pages shirt here: https://gearup.la/products/the-big-dog-los-angeles-baseball-collection MLB Insider ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/AkYBrhXiT-w/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/AkYBrhXiT-w/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/AkYBrhXiT-w/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Dodgers Nation",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-07-01T20:44:24Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "BQQn06G34IZjZipPumLnUiGTTa4",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "YLkNaWyoDCU"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-29T23:22:32Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "Dodgers vs. Royals Game Highlights (6/29/25) | MLB Highlights",
+            "description": "Dodgers vs. Royals full game highlights from 6/29/25, presented by @76Gasoline The Los Angeles Dodgers franchise, with seven ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/YLkNaWyoDCU/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/YLkNaWyoDCU/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/YLkNaWyoDCU/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-29T23:22:32Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "IE4tMhnqOu-cRbvgyfNjUbKdO3g",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "bpbJpZBp3yA"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-28T23:06:36Z",
+            "channelId": "UCqQo7ewe87aYAe7ub5UqXMw",
+            "title": "Los Angeles Dodgers vs Kansas City Royals - FULL GAME HIGHLIGHTS | June 28, 2025 MLB Season",
+            "description": "THUNDER CHAMPIONSHIP MERCH https://shop.houseofhighlights.com/collections/nba-champions-2025 ⛽ SUB TO HOUSE OF ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/bpbJpZBp3yA/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/bpbJpZBp3yA/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/bpbJpZBp3yA/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "House of Highlights",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-28T23:06:36Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "QYjFqDgyIeJ1Forj0eZja-ZGHWE",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "gAHvet9SDLQ"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-28T04:29:37Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "Dodgers vs. Royals Game Highlights (6/27/25) | MLB Highlights",
+            "description": "Dodgers vs. Royals full game highlights from 6/27/25, presented by @76Gasoline The Los Angeles Dodgers franchise, with seven ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/gAHvet9SDLQ/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/gAHvet9SDLQ/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/gAHvet9SDLQ/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-28T04:29:37Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "6ZpEg2OKJwfoxywhLrsLDZ1eUQM",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "tJMoT5GI-mY"
+            },
+            "snippet": {
+            "publishedAt": "2025-07-01T02:01:03Z",
+            "channelId": "UCwNqHDsnBCKT-olwJwIFyfg",
+            "title": "Should the Los Angeles Dodgers adjust plans with Shohei Ohtani? | MLB on FOX",
+            "description": "Kevin Burkhardt, Dontrelle Willis and the \"MLB on FOX\" crew debate whether the Los Angeles Dodgers should adjust plans with ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/tJMoT5GI-mY/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/tJMoT5GI-mY/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/tJMoT5GI-mY/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "FOX Sports",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-07-01T02:01:03Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "OOAujP4vVfyuZbMNexXqhzME2XU",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "2JyCJXLyuqI"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-20T07:19:51Z",
+            "channelId": "UCCPljZ6A_7jD0TC9xs_S39w",
+            "title": "Dodgers vs Padres gets HEATED, Ohtani gets hit TWICE 😬 #mlb #dodgers #baseball",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/2JyCJXLyuqI/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/2JyCJXLyuqI/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/2JyCJXLyuqI/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Dodger Nate",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-20T07:19:51Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "6QOKI98kpKQGPIqxA6Z94Aa-Czc",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "2HsXPO0delQ"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-26T05:32:29Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "Dodgers vs. Rockies Game Highlights (6/25/25) | MLB Highlights",
+            "description": "Dodgers vs. Rockies full game highlights from 6/25/25, presented by @76Gasoline The Los Angeles Dodgers franchise, with ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/2HsXPO0delQ/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/2HsXPO0delQ/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/2HsXPO0delQ/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-26T05:32:29Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "xZ9yMF8lFfmuTYPktQeQrXx9qgg",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "wnP2mKA-40Y"
+            },
+            "snippet": {
+            "publishedAt": "2025-07-02T05:34:42Z",
+            "channelId": "UCHl8qT8tApZ0Ove7WnthlyQ",
+            "title": "Los Angeles Dodgers vs Chicago White Sox MLB Live Stream",
+            "description": "Los Angeles Dodgers vs Chicago White Sox Live MLB Live Stream dodgers vs white sox Live MLB Play by Play 7/1/2025 LAD vs ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/wnP2mKA-40Y/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/wnP2mKA-40Y/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/wnP2mKA-40Y/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "The Sports Lounge ",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-07-02T05:34:42Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "0X_0kuwHzzYZ7pccEgBn1PQceL0",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "LWmUSN1Amgc"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-28T04:32:21Z",
+            "channelId": "UCoLrcjPV5PbUrUyXq5mjc_A",
+            "title": "Dodgers vs. Royals Game Highlights (6/27/25) | MLB Highlights",
+            "description": "Dodgers vs. Royals full game highlights from 6/27/25 Don't forget to subscribe! https://www.youtube.com/mlb Follow us elsewhere ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/LWmUSN1Amgc/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/LWmUSN1Amgc/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/LWmUSN1Amgc/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "MLB",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-28T04:32:21Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "fY7oeFd71A8TerLc-xFO4kNK1K8",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "v7DJwbKCEvE"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-25T03:45:13Z",
+            "channelId": "UCqQo7ewe87aYAe7ub5UqXMw",
+            "title": "Los Angeles Dodgers vs Colorado Rockies - FULL GAME HIGHLIGHTS | June 24, 2025 MLB Season",
+            "description": "THUNDER CHAMPIONSHIP MERCH https://shop.houseofhighlights.com/collections/nba-champions-2025 ⛽ SUB TO HOUSE OF ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/v7DJwbKCEvE/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/v7DJwbKCEvE/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/v7DJwbKCEvE/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "House of Highlights",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-25T03:45:13Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "f0g6BL5Yn32M6i9z4LLL67HvDbQ",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "7gINwN3Vl3w"
+            },
+            "snippet": {
+            "publishedAt": "2025-07-01T15:00:20Z",
+            "channelId": "UC9f7wZNEBBPAp-PWCu5E8Lg",
+            "title": "MLB URGENT! STAR LEFT FIELDER LEAVING THE DODGERS? REASON REVEALED! LOS ANGELES DODGERS NEWS",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/7gINwN3Vl3w/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/7gINwN3Vl3w/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/7gINwN3Vl3w/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Latest Los Angeles Dodgers News",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-07-01T15:00:20Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "MoU0pSC7oMIWwJi5haB2VNHoJxA",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "HMpvZSySTzo"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-28T03:39:18Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "“Freddie Freeman saves the day!” #dodgers #sports #losangeles #wow",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/HMpvZSySTzo/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/HMpvZSySTzo/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/HMpvZSySTzo/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-28T03:39:18Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "yFtX3BEnUp_pNoDaALazeknu0k8",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "oRTzW0ZFfA0"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-26T07:15:07Z",
+            "channelId": "UCoLrcjPV5PbUrUyXq5mjc_A",
+            "title": "Dodgers vs. Rockies Game Highlights (6/25/25) | MLB Highlights",
+            "description": "Dodgers vs. Rockies full game highlights from 6/25/25 Don't forget to subscribe! https://www.youtube.com/mlb Follow us ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/oRTzW0ZFfA0/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/oRTzW0ZFfA0/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/oRTzW0ZFfA0/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "MLB",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-26T07:15:07Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "xA_521XetVPg0ZFXeBLBV152yTo",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "XHvDFPosBfY"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-26T21:46:00Z",
+            "channelId": "UCqQo7ewe87aYAe7ub5UqXMw",
+            "title": "Los Angeles Dodgers vs Colorado Rockies - FULL GAME HIGHLIGHTS | June 26, 2025 MLB Season",
+            "description": "THUNDER CHAMPIONSHIP MERCH https://shop.houseofhighlights.com/collections/nba-champions-2025 ⛽ SUB TO HOUSE OF ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/XHvDFPosBfY/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/XHvDFPosBfY/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/XHvDFPosBfY/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "House of Highlights",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-26T21:46:00Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "FhEdkPqEYYBVHe-Xh625Aqgjy_Q",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "99RUJ3H_6MU"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-27T00:15:58Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "Dodgers vs. Rockies Game Highlights (6/26/25) | MLB Highlights",
+            "description": "Dodgers vs. Rockies full game highlights from 6/26/25, presented by @76Gasoline The Los Angeles Dodgers franchise, with ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/99RUJ3H_6MU/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/99RUJ3H_6MU/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/99RUJ3H_6MU/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-27T00:15:58Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "9dNONMVjGzc5S-I0k6wubcFYJCs",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "Oml7cyvBEhs"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-01T02:15:53Z",
+            "channelId": "UCwNqHDsnBCKT-olwJwIFyfg",
+            "title": "Freddie Freeman&#39;s son is ready for the league 😮\u200d💨 #FreddieFreeman #Dodgers #MLB #Freeman",
+            "description": "FOXSports #MLB #FreddieFreeman SUBSCRIBE to get the latest FOX Sports content: http://foxs.pt/SubscribeFOXSPORTS About ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/Oml7cyvBEhs/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/Oml7cyvBEhs/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/Oml7cyvBEhs/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "FOX Sports",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-01T02:15:53Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "NoQrXL9SpBS4zRNbCBIslgBu42U",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "NBfreSWAuEc"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-20T18:15:05Z",
+            "channelId": "UCl9E4Zxa8CVr2LBLD0_TaNg",
+            "title": "Roberts ejected because he doesn&#39;t think they should’ve been warned after Ohtani HBP, a breakdown",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/NBfreSWAuEc/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/NBfreSWAuEc/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/NBfreSWAuEc/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Jomboy Media",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-20T18:15:05Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "c4aWw_0sank5L8dfk5UPW4m9OIg",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "QnfV7pesj54"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-20T05:07:47Z",
+            "channelId": "UCoLrcjPV5PbUrUyXq5mjc_A",
+            "title": "Benches clear in the 9th inning of the Padres-Dodgers game in Los Angeles.",
+            "description": "Benches clear in the 9th inning of the Padres-Dodgers game in Los Angeles. Don't forget to subscribe!",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/QnfV7pesj54/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/QnfV7pesj54/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/QnfV7pesj54/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "MLB",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-20T05:07:47Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "UqALsSGIiP50es3ltj2Wz4kC9AE",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "8lmyAXkFdsw"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-24T19:55:56Z",
+            "channelId": "UC21wDWqEcXkVf7BwIq1GRVg",
+            "title": "Top 5 Farthest Shohei Ohtani Homers! #mlb #baseball #dodgers #shoheiohtani",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/8lmyAXkFdsw/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/8lmyAXkFdsw/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/8lmyAXkFdsw/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Top Five Moments",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-24T19:55:56Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "vfVpXhVxnua6u-HmJljeZploxQo",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "Qf3WQkXpqlY"
+            },
+            "snippet": {
+            "publishedAt": "2025-05-17T06:32:56Z",
+            "channelId": "UC_uEKs0oDGHNc1wyt_GUSyQ",
+            "title": "Hye Seong Kim&#39;s special handshakes with #dodgers teammates #mlb #baseball",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/Qf3WQkXpqlY/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/Qf3WQkXpqlY/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/Qf3WQkXpqlY/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "TST Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-05-17T06:32:56Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "HdT7aCpJP3vEkVyOA7DBM8M4bEM",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "y495PnJvlFQ"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-22T22:37:55Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "MAX MUNCY GRAND SLAM! #dodgers #sports #losangeles",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/y495PnJvlFQ/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/y495PnJvlFQ/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/y495PnJvlFQ/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-22T22:37:55Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "ALhsePMeFUQsGmNqWDmHsdTbMw0",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "-WUHTLna55s"
+            },
+            "snippet": {
+            "publishedAt": "2024-10-31T07:16:49Z",
+            "channelId": "UCwNqHDsnBCKT-olwJwIFyfg",
+            "title": "Every run of the Dodgers&#39; 5th inning comeback #mlb #baseball #worldseries",
+            "description": "mookiebetts #dodgers #FOXSports SUBSCRIBE to get the latest FOX Sports content: http://foxs.pt/SubscribeFOXSPORTS ▻First ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/-WUHTLna55s/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/-WUHTLna55s/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/-WUHTLna55s/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "FOX Sports",
+            "liveBroadcastContent": "none",
+            "publishTime": "2024-10-31T07:16:49Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "sM-FDShho_KskZ2eovrIWyQH-yc",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "4CPznaufPWQ"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-11T19:04:38Z",
+            "channelId": "UCwNqHDsnBCKT-olwJwIFyfg",
+            "title": "Could you pitch better than this? 🤔 #mlb #baseball #Dodgers",
+            "description": "FOXSports #MLB #Dodgers SUBSCRIBE to get the latest FOX Sports content: http://foxs.pt/SubscribeFOXSPORTS About FOX ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/4CPznaufPWQ/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/4CPznaufPWQ/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/4CPznaufPWQ/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "FOX Sports",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-11T19:04:38Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "m8gVfhBhIlWkD21ToXhoh9VIPaY",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "guLJwWLZDIg"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-20T06:25:05Z",
+            "channelId": "UC9-OpMMVoNP5o10_Iyq7Ndw",
+            "title": "Dodgers &amp; Padres got heated 👀",
+            "description": "Fernando Tatis Jr. and Shohei Ohtani are hit by pitches in the 9th inning of Dodgers vs Padres #mlb #baseball #dodgers #padres.",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/guLJwWLZDIg/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/guLJwWLZDIg/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/guLJwWLZDIg/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Bleacher Report",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-20T06:25:05Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "I24gVFYXJKEPivr1iOvDFGII-F4",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "LXVgh5s0gaM"
+            },
+            "snippet": {
+            "publishedAt": "2024-08-11T16:56:56Z",
+            "channelId": "UCe55MfGayC_ewkBTcc_Z8QA",
+            "title": "Paul Skenes warm-up vs. La Dodgers at dodgers stadium. 08.11.2024",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/LXVgh5s0gaM/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/LXVgh5s0gaM/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/LXVgh5s0gaM/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Charlie baseball",
+            "liveBroadcastContent": "none",
+            "publishTime": "2024-08-11T16:56:56Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "fJeSPmXxMJT-q62fuPoHCPG8Z98",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "tYRQ53e5EMk"
+            },
+            "snippet": {
+            "publishedAt": "2025-01-25T05:36:08Z",
+            "channelId": "UCCPljZ6A_7jD0TC9xs_S39w",
+            "title": "When Shohei Ohtani faced Paul Skenes 😳🔥 #mlb #baseball #dodgers #shoheiohtani",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/tYRQ53e5EMk/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/tYRQ53e5EMk/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/tYRQ53e5EMk/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Dodger Nate",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-01-25T05:36:08Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "HcpquxGlr9zb88rEFET1C96mAKc",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "BsAIl5CydH4"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-23T00:15:19Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "Nationals vs. Dodgers Game Highlights (6/22/25) | MLB Highlights",
+            "description": "Nationals vs. Dodgers full game highlights from 6/22/25, presented by @76Gasoline The Los Angeles Dodgers franchise, with ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/BsAIl5CydH4/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/BsAIl5CydH4/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/BsAIl5CydH4/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-23T00:15:19Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "OhDJpb6styd_L94uZefSCUwdkPI",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "QEzaUVCShOg"
+            },
+            "snippet": {
+            "publishedAt": "2024-10-26T04:07:27Z",
+            "channelId": "UCwNqHDsnBCKT-olwJwIFyfg",
+            "title": "Tokyo reacts to Dodgers&#39; walk-off Grand Slam #mlb #baseball #Dodgers #worldseries",
+            "description": "FOXSports #MLB #Dodgers SUBSCRIBE to get the latest FOX Sports content: http://foxs.pt/SubscribeFOXSPORTS ▻First Things ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/QEzaUVCShOg/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/QEzaUVCShOg/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/QEzaUVCShOg/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "FOX Sports",
+            "liveBroadcastContent": "none",
+            "publishTime": "2024-10-26T04:07:27Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "-GLc0kLVvD67w_ZQOkEy0BYzWB8",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "2xY7yjX3t3E"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-30T18:28:17Z",
+            "channelId": "UCja8sZ2T4ylIqjggA1Zuukg",
+            "title": "Latest MLB Power Rankings: Dodgers take No. 1, Astros gain momentum, Giants biggest faller, &amp; MORE",
+            "description": "Matt Snyder and Julian McWilliams joins CBS Sports HQ to discuss the latest MLB power rankings. SUBSCRIBE TO OUR ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/2xY7yjX3t3E/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/2xY7yjX3t3E/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/2xY7yjX3t3E/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "CBS Sports",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-30T18:28:17Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "5O0v3xjyGs5LrcPFrA85fvLnxzI",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "nVKNBT8FU60"
+            },
+            "snippet": {
+            "publishedAt": "2025-01-17T00:27:04Z",
+            "channelId": "UCCPljZ6A_7jD0TC9xs_S39w",
+            "title": "This Ohtani home run SAVED the Dodgers season in the NLDS 😳 #mlb #baseball #dodgers #shoheiohtani",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/nVKNBT8FU60/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/nVKNBT8FU60/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/nVKNBT8FU60/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Dodger Nate",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-01-17T00:27:04Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "7xTINPILkN_RJjudEcHCBYUSdR4",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "qtmVx5Si_A8"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-15T06:14:59Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "Giants vs. Dodgers Game Highlights (6/14/25) | MLB Highlights",
+            "description": "Giants vs. Dodgers full game highlights from 6/14/25, presented by @76Gasoline The Los Angeles Dodgers franchise, with seven ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/qtmVx5Si_A8/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/qtmVx5Si_A8/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/qtmVx5Si_A8/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-15T06:14:59Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "Hf-N1TXzYU1fr0g6M1_doJ2RTpk",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "fHLPoheJnus"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-06T00:42:47Z",
+            "channelId": "UCCPljZ6A_7jD0TC9xs_S39w",
+            "title": "CRAZY play helps Dodgers comeback win 😳🔥 #mlb #baseball #dodgers",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/fHLPoheJnus/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/fHLPoheJnus/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/fHLPoheJnus/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Dodger Nate",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-06T00:42:47Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "1vuzNocMsM8iomhvC2wBe9TQwZI",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "oJCTtcToVZQ"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-23T00:23:31Z",
+            "channelId": "UCoLrcjPV5PbUrUyXq5mjc_A",
+            "title": "Nationals vs. Dodgers Game Highlights (6/22/25) | MLB Highlights",
+            "description": "Nationals vs. Dodgers full game highlights from 6/22/25 Don't forget to subscribe! https://www.youtube.com/mlb Follow us ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/oJCTtcToVZQ/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/oJCTtcToVZQ/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/oJCTtcToVZQ/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "MLB",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-23T00:23:31Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "WCpQ2NceVSHP3kE8G2LWduELfyE",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "suKCxl1Nmzc"
+            },
+            "snippet": {
+            "publishedAt": "2023-07-12T00:24:29Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "There are always those teammates that wouldn’t make good roommates. 😂 #dodgers #mlb #losangeles",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/suKCxl1Nmzc/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/suKCxl1Nmzc/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/suKCxl1Nmzc/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2023-07-12T00:24:29Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "PgdeQDhZyHq2cr62b63fSXuGIn8",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "TB0W1jq8XPE"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-17T02:38:04Z",
+            "channelId": "UC3dtGgmaJfzWFgx7YWIUpKg",
+            "title": "SHOHEI IS BACK ON THE MOUND! ⚾️ Dodger Stadium went crazy for Shohei Ohtani who&#39;s back pitching.",
+            "description": "Shohei Ohtani enters a packed out Dodger Stadium to pitch against the San Diego Padres. ✓ Subscribe to ESPN Australia on ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/TB0W1jq8XPE/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/TB0W1jq8XPE/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/TB0W1jq8XPE/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "ESPN Australia",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-17T02:38:04Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "ZD3N2CsGDhCw_131yeZ_woVMxi4",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "8O5GAgWIMf8"
+            },
+            "snippet": {
+            "publishedAt": "2024-09-17T22:01:28Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "Who has the most bats? Who has the heaviest? Out Clubhouse Attendant Javi breaks it down! #dodgers",
+            "description": "",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/8O5GAgWIMf8/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/8O5GAgWIMf8/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/8O5GAgWIMf8/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2024-09-17T22:01:28Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "Hqyf_BVwUR1UyfdyJhYrsZrrwtU",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "GI0GBd3CkUs"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-15T06:11:16Z",
+            "channelId": "UCoLrcjPV5PbUrUyXq5mjc_A",
+            "title": "Giants vs. Dodgers Game Highlights (6/14/25) | MLB Highlights",
+            "description": "Giants vs. Dodgers full game highlights from 6/14/25 Don't forget to subscribe! https://www.youtube.com/mlb Follow us elsewhere ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/GI0GBd3CkUs/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/GI0GBd3CkUs/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/GI0GBd3CkUs/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "MLB",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-15T06:11:16Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "yyAskoyv6ktlM-x8nAfjpEJtlyk",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "7VWg7EBe124"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-26T23:58:45Z",
+            "channelId": "UCoLrcjPV5PbUrUyXq5mjc_A",
+            "title": "Dodgers vs. Rockies Game Highlights (6/26/25) | MLB Highlights",
+            "description": "Dodgers vs. Rockies full game highlights from 6/26/25 Don't forget to subscribe! https://www.youtube.com/mlb Follow us ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/7VWg7EBe124/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/7VWg7EBe124/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/7VWg7EBe124/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "MLB",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-26T23:58:45Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "soraZ0AnHyKZQBD_cUccNi7g2DM",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "b03xUaQkhhI"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-06T01:22:19Z",
+            "channelId": "UCoLrcjPV5PbUrUyXq5mjc_A",
+            "title": "Mets vs. Dodgers Game Highlights (6/5/25) | MLB Highlights",
+            "description": "Mets vs. Dodgers full game highlights from 6/5/25 Don't forget to subscribe! https://www.youtube.com/mlb Follow us elsewhere ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/b03xUaQkhhI/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/b03xUaQkhhI/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/b03xUaQkhhI/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "MLB",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-06T01:22:19Z"
+            }
+        },
+        {
+            "kind": "youtube#searchResult",
+            "etag": "-th-f_Hxf46ppIDykLTVtoBb9ak",
+            "id": {
+            "kind": "youtube#video",
+            "videoId": "zR5tfGcXd-Y"
+            },
+            "snippet": {
+            "publishedAt": "2025-06-10T06:08:30Z",
+            "channelId": "UC05cNJvMKzDLRPo59X2Xx7g",
+            "title": "Dodgers vs. Padres Game Highlights (6/9/25) | MLB Highlights",
+            "description": "Dodgers vs. Padres full game highlights from 6/9/25, presented by @76Gasoline The Los Angeles Dodgers franchise, with seven ...",
+            "thumbnails": {
+                "default": {
+                "url": "https://i.ytimg.com/vi/zR5tfGcXd-Y/default.jpg",
+                "width": 120,
+                "height": 90
+                },
+                "medium": {
+                "url": "https://i.ytimg.com/vi/zR5tfGcXd-Y/mqdefault.jpg",
+                "width": 320,
+                "height": 180
+                },
+                "high": {
+                "url": "https://i.ytimg.com/vi/zR5tfGcXd-Y/hqdefault.jpg",
+                "width": 480,
+                "height": 360
+                }
+            },
+            "channelTitle": "Los Angeles Dodgers",
+            "liveBroadcastContent": "none",
+            "publishTime": "2025-06-10T06:08:30Z"
+            }
+        }
+        ]
+    }
+]

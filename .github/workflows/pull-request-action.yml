@@ -36,3 +36,6 @@ jobs:
       - name: Run mypy
         run: mypy --ignore-missing-imports backend/src
       
+      - name: Run pytest
+        run: PYTHONPATH=backend/src pytest --cov=backend/src backend/tests
+      

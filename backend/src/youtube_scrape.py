@@ -13,7 +13,9 @@ The output from the endpoint will be ranked by those criteria.
 
 import argparse
 import os
+import random
 import re
+from typing import Any
 
 import googleapiclient.discovery
 import pandas as pd
@@ -63,7 +65,7 @@ def do_query(query: Query) -> JSONResponse:
     JSONResponse
         A JSON object
     """
-    df = main(query.query_string)
+    df = main(query.query_string).head(20)
     json_string = df.to_dict(orient="records")  # 'records' is a common format
     print("=================")
     print(json_string)
@@ -73,7 +75,7 @@ def do_query(query: Query) -> JSONResponse:
 
 def extract_search_data(
     instance: googleapiclient.discovery.Resource, query: str
-) -> dict:
+) -> list[Any]:
     """
     Search for videos that match a query string.
 
@@ -89,20 +91,36 @@ def extract_search_data(
     str
         The json data from the response.
     """
-    response = {}
-    try:
-        request = instance.search().list(  # type: ignore
-            part="snippet", q=query, maxResults=250
-        )
-        response = request.execute()
-    except googleapiclient.errors.HttpError as e:
-        print(f"Error: unexpected exception e={e}")
-    return response
+    MAX_RESULTS_PER_PAGE = 50
+    MAX_PAGES = 5
+    response_list: list[Any] = []
+    params = {"part": "snippet", "q": query, "maxResults": MAX_RESULTS_PER_PAGE}
+
+    while True:
+        page_token = None
+
+        if len(response_list) >= MAX_PAGES:
+            break
+
+        try:
+            request = instance.search().list(**params)  # type: ignore
+            response = request.execute()
+            response_list.append(response)
+            page_token = response.get("nextPageToken")
+        except googleapiclient.errors.HttpError as e:
+            print(f"Error: unexpected exception e={e}")
+
+        if page_token:
+            params = {"part": "snippet", "q": query, "pageToken": page_token}
+        else:
+            break
+
+    return response_list
 
 
 def extract_comment_thread_data(
-    instance: googleapiclient.discovery.Resource, search_data: dict
-) -> dict:
+    instance: googleapiclient.discovery.Resource, search_data: list[Any]
+) -> dict[str, list[Any]]:
     """
     Extract comments for all of the videos.
 
@@ -118,25 +136,44 @@ def extract_comment_thread_data(
     list
         A list of comment threads.
     """
-    data: dict = {}
+    data: dict[str, list[Any]] = {}
     data["items"] = []
-    for item in search_data.get("items", []):
-        video_id = item.get("id", {}).get("videoId")
-        if video_id:
-            try:
-                request = instance.commentThreads().list(  # type: ignore
-                    part="id, replies, snippet", videoId=video_id
-                )
-                response = request.execute()
+    sampled_videos: dict[str, list] = {}
+    n = 5
+    videos: dict[str, list[Any]] = {}
 
-                data["items"].append(response)
-            except googleapiclient.errors.HttpError:
-                pass
+    # Create dictionary
+    for list_item in search_data:
+        for item in list_item.get("items", []):
+            video_id = item.get("id", {}).get("videoId")
+            channel_id = item.get("snippet", {}).get("channelId")
+            if channel_id not in videos:
+                videos[channel_id] = []
+            videos[channel_id].append(video_id)
+
+    # Randomly sample videos to reduce API calls.
+    for channel_id, video_list in videos.items():
+        sampled_videos[channel_id] = (
+            random.sample(video_list, n) if len(video_list) > n else video_list
+        )
+
+    for channel_id, video_list in sampled_videos.items():
+        for video_id in video_list:
+            if video_id:
+                try:
+                    request = instance.commentThreads().list(  # type: ignore
+                        part="id, replies, snippet", videoId=video_id
+                    )
+                    response = request.execute()
+
+                    data["items"].append(response)
+                except googleapiclient.errors.HttpError:
+                    pass
     return data
 
 
 def extract_channel_data(
-    instance: googleapiclient.discovery.Resource, search_data: dict
+    instance: googleapiclient.discovery.Resource, search_data: list[Any]
 ) -> dict:
     """
     Extract comments for all of the videos.
@@ -156,15 +193,16 @@ def extract_channel_data(
     data: dict = {}
     data["items"] = []
     channel_ids = set()
-    for item in search_data.get("items", []):
-        channel_id = item.get("snippet", {}).get("channelId")
-        if channel_id not in channel_ids:
-            request = instance.channels().list(  # type: ignore
-                part="id, statistics, snippet", id=channel_id
-            )
-            response = request.execute()
-            data["items"].append(response)
-            channel_ids.add(channel_id)
+    for list_item in search_data:
+        for item in list_item.get("items", []):
+            channel_id = item.get("snippet", {}).get("channelId")
+            if channel_id not in channel_ids:
+                request = instance.channels().list(  # type: ignore
+                    part="id, statistics, snippet", id=channel_id
+                )
+                response = request.execute()
+                data["items"].append(response)
+                channel_ids.add(channel_id)
     return data
 
 
@@ -178,19 +216,34 @@ def transform_search_data(search_data: dict) -> pd.DataFrame:
         The json data returned from the search query above.
     """
     data = []
-    for item in search_data.get("items", []):
-        snippet = item.get("snippet", {})
-        channel_tuple = (
-            snippet.get("channelId", ""),
-            snippet.get("channelTitle", ""),
-            snippet.get("description", ""),
-        )
-        data.append(channel_tuple)
+    for list_item in search_data:
+        for item in list_item.get("items", []):
+            snippet = item.get("snippet", {})
+            channel_tuple = (
+                snippet.get("channelId", ""),
+                snippet.get("channelTitle", ""),
+                snippet.get("description", ""),
+            )
+            data.append(channel_tuple)
     df = pd.DataFrame(data, columns=["Id", "Title", "Description"])
     return df
 
 
 def perform_sentiment_analysis(text: str) -> float:
+    """
+    Perform a sentiment analysis on each comment.
+
+    Parameters
+    ----------
+    text : str
+       The string to be analyzed.
+
+    Returns
+    -------
+    float
+        A value between 0.0 and 1.0 with 0.0 being no positive sentiment and
+        1.0 being 100% positive sentiment.
+    """
     # Initialize VADER sentiment analyzer
     sid = SentimentIntensityAnalyzer()
     # Perform sentiment analysis

@@ -21,3 +21,12 @@ repos:
       - id: mypy
         additional_dependencies:
           - types-tabulate
+  - repo: local
+    hooks:
+    - id: pytest
+      name: pytest
+      entry: bash -c "PYTHONPATH=backend/src pytest --cov=backend/src backend/tests"
+      language: system # Or 'python' if pytest is installed in the hook's environment
+      types: [python]
+      pass_filenames: false
+      always_run: true
