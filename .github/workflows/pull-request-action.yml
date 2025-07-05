@@ -39,6 +39,9 @@ jobs:
       - name: Run mypy
         run: mypy --ignore-missing-imports backend/src
       
+      - name: Download NLTK libraries
+        run: PYTHONPATH=backend/src python backend/src/download.py
+        
       - name: Run pytest
         run: PYTHONPATH=backend/src pytest --cov=backend/src backend/tests
       
