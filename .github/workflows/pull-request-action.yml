@@ -21,8 +21,12 @@ jobs:
         with:
           python-version: '3.9.21' # Specify your desired Python version
 
-      - name: Install tools
+      - name: Install requirements
         run: pip install -r backend/src/requirements.txt
+
+      - name: Install tools
+        run: pip install black isort mypy flake8
+
       - name: Run black
         run: black --check --verbose --line-length 80 backend/src
 
