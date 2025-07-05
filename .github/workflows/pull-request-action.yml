@@ -25,7 +25,7 @@ jobs:
         run: pip install -r backend/src/requirements.txt
 
       - name: Install tools
-        run: pip install black isort mypy flake8
+        run: pip install black isort mypy flake8 types-tabulate
 
       - name: Run black
         run: black --check --verbose --line-length 80 backend/src
