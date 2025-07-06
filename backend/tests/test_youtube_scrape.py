@@ -370,7 +370,9 @@ def test_extract_search_data_with_page_token():
 @patch("backend.src.youtube_scrape.extract_channel_data")
 @patch("backend.src.youtube_scrape.extract_comment_thread_data")
 @patch("backend.src.download.download")
+@patch("googleapiclient.discovery.build")
 def test_main(
+    mock_googleapiclient: MagicMock,
     mock_download: MagicMock,
     mock_extract_comment_thread_data: MagicMock,
     mock_extract_channel_data: MagicMock,
@@ -381,6 +383,8 @@ def test_main(
 
     Parameters
     ----------
+    mock_googleapiclient : MagicMock
+        Mock for googleapi
     mock_download : MagicMock
         Mock for NLTK downloads
     mock_extract_comment_thread_data : MagicMock
@@ -416,6 +420,8 @@ def test_main(
     mock_extract_channel_data.return_value = channel_data
     mock_extract_search_data.return_value = search_data
     mock_download.return_value = None
+    mock_googleapiclient.return_value = MagicMock()
+
     df = main("dodgers")
     assert len(df) == 2
     assert all(
