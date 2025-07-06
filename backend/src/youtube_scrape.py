@@ -65,7 +65,8 @@ def do_query(query: Query) -> JSONResponse:
     JSONResponse
         A JSON object
     """
-    df = main(query.query_string).head(20)
+    MAX_RESULTS = 20
+    df = main(query.query_string).head(MAX_RESULTS)
     json_string = df.to_dict(orient="records")  # 'records' is a common format
     print("=================")
     print(json_string)
@@ -93,9 +94,9 @@ def extract_search_data(
     """
     MAX_RESULTS_PER_PAGE = 50
     MAX_PAGES = 5
+
     response_list: list[Any] = []
     params = {"part": "snippet", "q": query, "maxResults": MAX_RESULTS_PER_PAGE}
-
     while True:
         page_token = None
 
@@ -138,9 +139,8 @@ def extract_comment_thread_data(
     """
     data: dict[str, list[Any]] = {}
     data["items"] = []
-    sampled_videos: dict[str, list] = {}
-    n = 5
     videos: dict[str, list[Any]] = {}
+    n = 2
 
     # Create dictionary
     for list_item in search_data:
@@ -151,24 +151,18 @@ def extract_comment_thread_data(
                 videos[channel_id] = []
             videos[channel_id].append(video_id)
 
-    # Randomly sample videos to reduce API calls.
     for channel_id, video_list in videos.items():
-        sampled_videos[channel_id] = (
-            random.sample(video_list, n) if len(video_list) > n else video_list
-        )
-
-    for channel_id, video_list in sampled_videos.items():
+        if len(video_list) > 2:
+            video_list = random.sample(video_list, n)
         for video_id in video_list:
-            if video_id:
-                try:
-                    request = instance.commentThreads().list(  # type: ignore
-                        part="id, replies, snippet", videoId=video_id
-                    )
-                    response = request.execute()
-
-                    data["items"].append(response)
-                except googleapiclient.errors.HttpError:
-                    pass
+            try:
+                request = instance.commentThreads().list(  # type: ignore
+                    part="id, replies, snippet", videoId=video_id
+                )
+                response = request.execute()
+                data["items"].append(response)
+            except googleapiclient.errors.HttpError:
+                pass
     return data
 
 
@@ -176,7 +170,7 @@ def extract_channel_data(
     instance: googleapiclient.discovery.Resource, search_data: list[Any]
 ) -> dict:
     """
-    Extract comments for all of the videos.
+    Extract channel data for all of the videos.
 
     Parameters
     ----------
@@ -196,37 +190,41 @@ def extract_channel_data(
     for list_item in search_data:
         for item in list_item.get("items", []):
             channel_id = item.get("snippet", {}).get("channelId")
-            if channel_id not in channel_ids:
-                request = instance.channels().list(  # type: ignore
-                    part="id, statistics, snippet", id=channel_id
-                )
+            channel_ids.add(channel_id)
+
+    channel_id_list = list(channel_ids)
+    chunk_size = 10
+    sublists = [
+        channel_id_list[i : i + chunk_size]  # noqa: E203
+        for i in range(0, len(channel_id_list), chunk_size)
+    ]
+    for sublist in sublists:
+        channel_ids_str = ",".join(list(sublist))
+        params = {
+            "part": "id, statistics, snippet",
+            "id": channel_ids_str,
+            "maxResults": 50,
+        }
+        while True:
+            page_token = None
+            try:
+                request = instance.channels().list(**params)
                 response = request.execute()
-                data["items"].append(response)
-                channel_ids.add(channel_id)
+                data["items"].extend(response.get("items", []))
+                page_token = response.get("nextPageToken")
+            except googleapiclient.errors.HttpError as e:
+                print(f"Error: unexpected exception e={e}")
+
+            if page_token:
+                params = {
+                    "part": "id, statistics, snippet",
+                    "id": channel_ids_str,
+                    "pageToken": page_token,
+                }
+            else:
+                break
+
     return data
-
-
-def transform_search_data(search_data: dict) -> pd.DataFrame:
-    """
-    Extract the channel id and channel title from the json data.
-
-    Parameters
-    ----------
-    search_data : dict
-        The json data returned from the search query above.
-    """
-    data = []
-    for list_item in search_data:
-        for item in list_item.get("items", []):
-            snippet = item.get("snippet", {})
-            channel_tuple = (
-                snippet.get("channelId", ""),
-                snippet.get("channelTitle", ""),
-                snippet.get("description", ""),
-            )
-            data.append(channel_tuple)
-    df = pd.DataFrame(data, columns=["Id", "Title", "Description"])
-    return df
 
 
 def perform_sentiment_analysis(text: str) -> float:
@@ -300,8 +298,8 @@ def transform_channel_data(query: str, channel_data: dict) -> pd.DataFrame:
         A useble dataframe
     """
     data = []
-    for item in channel_data.get("items", []):
-        for channel_item in item.get("items", []):
+    for items in channel_data.get("items", []):
+        for channel_item in items.get("items", []):
             channel_id = channel_item.get("id", "")
             custom_url = channel_item.get("snippet", {}).get("customUrl", "")
             url = f"https://www.youtube.com/{custom_url}"
@@ -325,18 +323,18 @@ def transform_channel_data(query: str, channel_data: dict) -> pd.DataFrame:
                     sim_score,
                 )
             )
-    df = pd.DataFrame(
-        data,
-        columns=[
-            "Channel Id",
-            "Title",
-            "Url",
-            "Description",
-            "Videos",
-            "Subscribers",
-            "Similarity",
-        ],
-    )
+        df = pd.DataFrame(
+            data,
+            columns=[
+                "Channel Id",
+                "Title",
+                "Url",
+                "Description",
+                "Videos",
+                "Subscribers",
+                "Similarity",
+            ],
+        )
     return df
 
 
@@ -360,7 +358,9 @@ def transform_data(
         A combined dataframe with elements from the channel and comment threads.
     """
     comment_thread_df = transform_comment_thread_data(comment_thread_data)
+
     channel_df = transform_channel_data(query, channel_data)
+
     combined_df = pd.merge(channel_df, comment_thread_df, on="Channel Id")
     combined_df["Videos Rank"] = combined_df["Videos"].rank(
         method="dense", ascending=False

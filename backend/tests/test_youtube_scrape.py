@@ -4,7 +4,21 @@ Test the youtube_scrape module
 
 import json
 import re
-from backend.src.youtube_scrape import fuzzy_similarity, perform_sentiment_analysis, transform_channel_data
+from typing import Optional
+from unittest.mock import MagicMock, patch
+
+from backend.src.youtube_scrape import (
+    extract_channel_data,
+    extract_comment_thread_data,
+    extract_search_data,
+    fuzzy_similarity,
+    main,
+    perform_sentiment_analysis,
+    transform_channel_data,
+    transform_comment_thread_data,
+    transform_data,
+)
+
 
 def test_fuzzy_similarity():
     """
@@ -22,29 +36,38 @@ def test_fuzzy_similarity():
     result = fuzzy_similarity(str1, "Dodge ball")
     assert result == 83.0
 
-    str2 = ("DodgerBlue.com is run by credentialed reporters and your " +
-    "trusted source for the latest Los Angeles Dodgers news, rumors, " + 
-    "opinion, score updates and more involving Shohei Ohtani, Mookie" + 
-    " Betts, Freddie Freeman")
+    str2 = (
+        "DodgerBlue.com is run by credentialed reporters and your "
+        + "trusted source for the latest Los Angeles Dodgers news, rumors, "
+        + "opinion, score updates and more involving Shohei Ohtani, Mookie"
+        + " Betts, Freddie Freeman"
+    )
     result = fuzzy_similarity(str1, str2)
     assert result == 100.0
 
-    str2 = ("Looking over the country with those sunken eyes as if the world" +
-    " out there had been altered or made suspect by what he’d seen of it " + 
-    "elsewhere. As if he might never see it right again. Or worse did see " + 
-    "it right at last. See it as it had always been, would forever be.")
+    str2 = (
+        "Looking over the country with those sunken eyes as if the world"
+        + " out there had been altered or made suspect by what he’d seen of it "
+        + "elsewhere. As if he might never see it right again. Or worse did "
+        + "see it right at last. See it as it had always been, would "
+        "forever be."
+    )
     result = fuzzy_similarity(str1, str2)
     assert result == 55.0
+
 
 def test_perform_sentiment_analysis():
     """
     Test the perform_sentiment_analysis method.
     """
 
-    str1 = ("Looking over the country with those sunken eyes as if the world" +
-    " out there had been altered or made suspect by what he’d seen of it " + 
-    "elsewhere. As if he might never see it right again. Or worse did see " + 
-    "it right at last. See it as it had always been, would forever be.")
+    str1 = (
+        "Looking over the country with those sunken eyes as if the world"
+        + " out there had been altered or made suspect by what he’d seen of it "
+        + "elsewhere. As if he might never see it right again. Or worse "
+        + "did see it right at last. See it as it had always been, would "
+        + "forever be."
+    )
     result = perform_sentiment_analysis(str1)
     assert result == 0.0
 
@@ -56,31 +79,369 @@ def test_perform_sentiment_analysis():
     result = perform_sentiment_analysis(str1)
     assert result == 0.0
 
-    str1 = ("The shoe is on the hand it fits, there's really nothing much to it " +
-    "Whistle through your teeth and spit 'cause it's alright " +
-    "Oh, well, a touch of grey, kinda suits you anyway " +
-    "That was all I had to say and it's alright")
+    str1 = (
+        "The shoe is on the hand it fits, there's really nothing much to it "
+        + "Whistle through your teeth and spit 'cause it's alright "
+        + "Oh, well, a touch of grey, kinda suits you anyway "
+        + "That was all I had to say and it's alright"
+    )
     result = perform_sentiment_analysis(str1)
     assert result == 0.226
+
 
 def test_transform_channel_data():
     """
     Test the transform_channel_data method.
     """
     columns = [
-            "Channel Id",
-            "Title",
-            "Url",
-            "Description",
-            "Videos",
-            "Subscribers",
-            "Similarity"
-        ]
-    
+        "Channel Id",
+        "Title",
+        "Url",
+        "Description",
+        "Videos",
+        "Subscribers",
+        "Similarity",
+    ]
+
     with open("backend/tests/channel_results.json", "r") as json_file:
         channel_data = json.load(json_file)
     df = transform_channel_data("dodgers", channel_data)
     assert df.columns.to_list() == columns
     assert len(df) == 15
-    assert all([similarity >= 0.0 and similarity <= 100.0 for similarity in df["Similarity"].to_list()])
-    assert all([re.match('https://www.youtube.com/.*', url) for url in df["Url"].to_list()])
+    assert all(
+        [
+            similarity >= 0.0 and similarity <= 100.0
+            for similarity in df["Similarity"].to_list()
+        ]
+    )
+    assert all(
+        [
+            re.match("https://www.youtube.com/.*", url)
+            for url in df["Url"].to_list()
+        ]
+    )
+
+
+def test_transform_comment_thread_data():
+    """
+    Test the transform_comment_thread_data method.
+    """
+    columns = [
+        "Channel Id",
+        "Score",
+    ]
+    with open("backend/tests/comment_thread_results.json", "r") as json_file:
+        comment_threads_data = json.load(json_file)
+    df = transform_comment_thread_data(comment_threads_data)
+
+    assert df.columns.to_list() == columns
+    assert len(df) == 3
+    assert all(
+        [score >= 0.0 and score <= 1.0 for score in df["Score"].to_list()]
+    )
+
+
+def test_transform_data():
+    """
+    Test the transform_data method.
+    """
+    columns = [
+        "Channel Id",
+        "Title",
+        "Url",
+        "Description",
+        "" "Videos",
+        "Subscribers",
+        "Similarity",
+        "Score",
+        "Videos Rank",
+        "Subscribers Rank",
+        "Score Rank",
+        "Similarity Rank",
+        "Average Rank",
+    ]
+    with open("backend/tests/comment_thread_results.json", "r") as json_file:
+        comment_threads_data = json.load(json_file)
+
+    with open("backend/tests/channel_results.json", "r") as json_file:
+        channel_data = json.load(json_file)
+
+    df = transform_data("dodgers", comment_threads_data, channel_data)
+
+    assert len(df) == 2
+    assert all(
+        [score >= 0.0 and score <= 1.0 for score in df["Score"].to_list()]
+    )
+
+    assert all(
+        [
+            similarity >= 0.0 and similarity <= 100.0
+            for similarity in df["Similarity"].to_list()
+        ]
+    )
+
+    assert all(
+        [rank > 0 and rank <= len(df) for rank in df["Videos Rank"].to_list()]
+    )
+
+    assert all(
+        [
+            rank > 0 and rank <= len(df)
+            for rank in df["Subscribers Rank"].to_list()
+        ]
+    )
+
+    assert all(
+        [rank > 0 and rank <= len(df) for rank in df["Score Rank"].to_list()]
+    )
+
+    assert df.columns.to_list() == columns
+
+
+def test_extract_comment_thread_data():
+    """
+    Tests the extract_comment_thread_data method.
+    """
+
+    def list_method(part: Optional[str], videoId: Optional[str]):
+        video_id = str(videoId)
+        assert part == "id, replies, snippet"
+        retval = MagicMock()
+        retval.execute.return_value = {"videoId": video_id}
+        return retval
+
+    instance = MagicMock()
+    comment_threads = MagicMock()
+    comment_threads.list.side_effect = list_method
+    instance.commentThreads.return_value = comment_threads
+
+    with open("backend/tests/search_results.json", "r") as json_file:
+        search_data = json.load(json_file)
+
+    comment_thread_data = extract_comment_thread_data(instance, search_data)
+    assert comment_threads.list.call_count == 23
+
+    search_data_l = []
+    for list_item in search_data:
+        for item in list_item.get("items", []):
+            video_id = item.get("id", {}).get("videoId")
+            search_data_l.append(video_id)
+    for list_item in comment_thread_data.get("items", []):
+        for video_id in [
+            item["videoId"] for item in list_item.get("items", [])
+        ]:
+            assert video_id in search_data_l
+
+
+def test_extract_channel_data():
+    """
+    Tests the extract_channel_data method.
+    """
+
+    def list_method(
+        part: Optional[str] = None,
+        id: Optional[str] = None,
+        pageToken: Optional[str] = None,
+        maxResults: int = 5,
+    ):
+        id = str(id)
+        assert part == "id, statistics, snippet"
+        ids = id.split(",")
+        assert len(ids) <= 10
+        retval = MagicMock()
+        retval.id.return_value = {"id": id}
+        retval.execute.return_value = {"items": [{"id": id} for id in ids]}
+        return retval
+
+    instance = MagicMock()
+    channels = MagicMock()
+    channels.list.side_effect = list_method
+    instance.channels.return_value = channels
+
+    with open("backend/tests/search_results.json", "r") as json_file:
+        search_data = json.load(json_file)
+
+    result = extract_channel_data(instance, search_data)
+    assert channels.list.call_count == 2
+    assert "items" in result
+    items = result.get("items", [])
+    assert len(items) == 17
+    for item in items:
+        assert "id" in item
+
+    search_data_l = []
+    for list_item in search_data:
+        for item in list_item.get("items", []):
+            channel_id = item.get("snippet", {}).get("channelId")
+            search_data_l.append(channel_id)
+
+    for list_item in result.get("items", []):
+        list_item.get("id") in search_data_l
+
+
+def test_extract_channel_data_with_page_token():
+    """
+    Tests the extract_channel_data method with paging.
+    """
+
+    def list_method(
+        part: Optional[str] = None,
+        id: Optional[str] = None,
+        pageToken: Optional[str] = None,
+        maxResults: int = 5,
+    ):
+        _ = maxResults
+        id = str(id)
+        assert part == "id, statistics, snippet"
+        ids = id.split(",")
+        assert len(ids) <= 10
+        retval = MagicMock()
+        retval.id.return_value = {"id": id}
+        if not pageToken:
+            retval.execute.return_value = {
+                "nextPageToken": "foobar",
+                "items": [{"id": id} for id in ids],
+            }
+        else:
+            retval.execute.return_value = {"items": [{"id": id} for id in ids]}
+        return retval
+
+    instance = MagicMock()
+    channels = MagicMock()
+    channels.list.side_effect = list_method
+    instance.channels.return_value = channels
+
+    with open("backend/tests/search_results.json", "r") as json_file:
+        search_data = json.load(json_file)
+
+    result = extract_channel_data(instance, search_data)
+    assert channels.list.call_count == 4
+    assert "items" in result
+    items = result.get("items", [])
+    assert len(items) == 34
+    for item in items:
+        assert "id" in item
+
+    search_data_l = []
+    for list_item in search_data:
+        for item in list_item.get("items", []):
+            channel_id = item.get("snippet", {}).get("channelId")
+            search_data_l.append(channel_id)
+
+    for list_item in result.get("items", []):
+        list_item.get("id") in search_data_l
+
+
+def test_extract_search_data_with_page_token():
+    """
+    Tests the extract_channel_data method with paging.
+    """
+
+    def list_method(
+        part: Optional[str] = None,
+        q: Optional[str] = None,
+        pageToken: Optional[str] = None,
+        maxResults: int = 5,
+    ):
+        _ = q
+        assert part == "snippet"
+        retval = MagicMock()
+        with open("backend/tests/search_results.json", "r") as json_file:
+            search_data = json.load(json_file)
+        if not pageToken:
+            retval.execute.return_value = search_data[0]
+        else:
+            ret_dict = search_data[0]
+            del ret_dict["nextPageToken"]
+            retval.execute.return_value = ret_dict
+        return retval
+
+    instance = MagicMock()
+    search = MagicMock()
+    search.list.side_effect = list_method
+    instance.search.return_value = search
+
+    result = extract_search_data(instance, "dodgers")
+    assert instance.search.call_count == 2
+    assert len(result) == 2
+
+
+@patch("backend.src.youtube_scrape.extract_search_data")
+@patch("backend.src.youtube_scrape.extract_channel_data")
+@patch("backend.src.youtube_scrape.extract_comment_thread_data")
+@patch("backend.src.download.download")
+def test_main(
+    mock_download: MagicMock,
+    mock_extract_comment_thread_data: MagicMock,
+    mock_extract_channel_data: MagicMock,
+    mock_extract_search_data: MagicMock,
+):
+    """
+    Test the main method.
+
+    Parameters
+    ----------
+    mock_download : MagicMock
+        Mock for NLTK downloads
+    mock_extract_comment_thread_data : MagicMock
+        Mock for comment thread data download
+    mock_extract_channel_data : MagicMock
+        Mock for channel data download
+    mock_extract_search_data : MagicMock
+        Mock for search data download
+    """
+    columns = [
+        "Channel Id",
+        "Title",
+        "Url",
+        "Description",
+        "" "Videos",
+        "Subscribers",
+        "Similarity",
+        "Score",
+        "Videos Rank",
+        "Subscribers Rank",
+        "Score Rank",
+        "Similarity Rank",
+        "Average Rank",
+    ]
+    with open("backend/tests/search_results.json", "r") as json_file:
+        search_data = json.load(json_file)
+    with open("backend/tests/channel_results.json", "r") as json_file:
+        channel_data = json.load(json_file)
+    with open("backend/tests/comment_thread_results.json", "r") as json_file:
+        comment_thread_data = json.load(json_file)
+
+    mock_extract_comment_thread_data.return_value = comment_thread_data
+    mock_extract_channel_data.return_value = channel_data
+    mock_extract_search_data.return_value = search_data
+    mock_download.return_value = None
+    df = main("dodgers")
+    assert len(df) == 2
+    assert all(
+        [score >= 0.0 and score <= 1.0 for score in df["Score"].to_list()]
+    )
+
+    assert all(
+        [
+            similarity >= 0.0 and similarity <= 100.0
+            for similarity in df["Similarity"].to_list()
+        ]
+    )
+
+    assert all(
+        [rank > 0 and rank <= len(df) for rank in df["Videos Rank"].to_list()]
+    )
+
+    assert all(
+        [
+            rank > 0 and rank <= len(df)
+            for rank in df["Subscribers Rank"].to_list()
+        ]
+    )
+
+    assert all(
+        [rank > 0 and rank <= len(df) for rank in df["Score Rank"].to_list()]
+    )
+
+    assert df.columns.to_list() == columns
