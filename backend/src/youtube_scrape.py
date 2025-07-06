@@ -337,7 +337,6 @@ def transform_channel_data(query: str, channel_data: dict) -> pd.DataFrame:
         )
     return df
 
-
 def transform_data(
     query: str, comment_thread_data: dict, channel_data: dict
 ) -> pd.DataFrame:
@@ -346,9 +345,12 @@ def transform_data(
 
     Parameters
     ----------
+    query : str
+        q parameter for the search data
+    
     comment_thread_data : dict
         JSON dictionary containing comment thread results.
-
+    
     channel_data : dict
         JSON dictionary containing channel results.
 
@@ -357,6 +359,9 @@ def transform_data(
     pd.DataFrame
         A combined dataframe with elements from the channel and comment threads.
     """
+
+
+    
     comment_thread_df = transform_comment_thread_data(comment_thread_data)
 
     channel_df = transform_channel_data(query, channel_data)

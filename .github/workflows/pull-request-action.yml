@@ -1,11 +1,7 @@
 name: Pull Request Action
 on:
   push:
-    paths:
-      - '*.py'
   pull_request:
-    paths:
-      - '*.py'
   workflow_dispatch:
 
 jobs:
@@ -41,7 +37,7 @@ jobs:
       
       - name: Download NLTK libraries
         run: PYTHONPATH=backend/src python backend/src/download.py
-        
+
       - name: Run pytest
         run: PYTHONPATH=backend/src pytest --cov=backend/src backend/tests
       
