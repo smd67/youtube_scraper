@@ -208,7 +208,7 @@ def extract_channel_data(
         while True:
             page_token = None
             try:
-                request = instance.channels().list(**params)
+                request = instance.channels().list(**params) # type: ignore
                 response = request.execute()
                 data["items"].extend(response.get("items", []))
                 page_token = response.get("nextPageToken")
