@@ -19,13 +19,14 @@ from typing import Any
 
 import googleapiclient.discovery
 import pandas as pd
-from download import download
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fuzzywuzzy import fuzz
 from nltk.sentiment import SentimentIntensityAnalyzer
 from pydantic import BaseModel
 from tabulate import tabulate
+
+from .download import download
 
 
 class Query(BaseModel):
