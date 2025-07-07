@@ -26,7 +26,7 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 from pydantic import BaseModel
 from tabulate import tabulate
 
-from .download import download
+from download import download
 
 
 class Query(BaseModel):
