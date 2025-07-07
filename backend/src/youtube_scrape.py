@@ -13,6 +13,7 @@ The output from the endpoint will be ranked by those criteria.
 
 import argparse
 import os
+import json
 import random
 import re
 from typing import Any
@@ -22,7 +23,6 @@ import pandas as pd
 from download import download
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
 from fuzzywuzzy import fuzz
 from nltk.sentiment import SentimentIntensityAnalyzer
 from pydantic import BaseModel
@@ -35,6 +35,26 @@ class Query(BaseModel):
     """
 
     query_string: str
+
+
+class Row(BaseModel):
+    """
+    A row of data returned by the backend.
+    """
+
+    Channel_Id: str
+    Title: str
+    Url: str
+    Description: str
+    Videos: int
+    Subscribers: int
+    Similarity: float
+    Score: float
+    Videos_Rank: int
+    Subscribers_Rank: int
+    Score_Rank: int
+    Similarity_Rank: int
+    Average_Rank: float
 
 
 origins = ["*"]
@@ -51,27 +71,32 @@ app.add_middleware(
 
 
 @app.post("/query/")
-def do_query(query: Query) -> JSONResponse:
+def do_query(query: Query) -> list[Row]:
     """
-    API endpoint to start the query.
+    This is the main api entry point that the frontend communicates through.
 
     Parameters
     ----------
     query : Query
-        Pydantic class that represents a query.
+        This is the query string to search for. It gets used as the q parameter
+        to the YouTube data API.
+
 
     Returns
     -------
-    JSONResponse
-        A JSON object
+    list[Row]
+        A list of JSON objects that includes information about interesting channels you
+        might want to subscribe to.
     """
+    
     MAX_RESULTS = 20
     df = main(query.query_string).head(MAX_RESULTS)
-    json_string = df.to_dict(orient="records")  # 'records' is a common format
+    json_data = df.to_dict(orient="records")  # 'records' is a common format
     print("=================")
-    print(json_string)
+    print(json_data)
     print("=================")
-    return JSONResponse(content=json_string)
+    return [Row(**row_dict) for row_dict in json_data]
+
 
 
 def extract_search_data(
@@ -278,8 +303,8 @@ def transform_comment_thread_data(comment_thread_data: dict) -> pd.DataFrame:
                 comment_text = reply.get("snippet", {}).get("textOriginal", "")
                 score = perform_sentiment_analysis(comment_text)
                 data.append((channel_id, score))
-    df = pd.DataFrame(data, columns=["Channel Id", "Score"])
-    grouped_data = df.groupby("Channel Id")["Score"].mean()
+    df = pd.DataFrame(data, columns=["Channel_Id", "Score"])
+    grouped_data = df.groupby("Channel_Id")["Score"].mean()
     result_df = grouped_data.reset_index()
     return result_df
 
@@ -298,43 +323,42 @@ def transform_channel_data(query: str, channel_data: dict) -> pd.DataFrame:
         A useble dataframe
     """
     data = []
-    for items in channel_data.get("items", []):
-        for channel_item in items.get("items", []):
-            channel_id = channel_item.get("id", "")
-            custom_url = channel_item.get("snippet", {}).get("customUrl", "")
-            url = f"https://www.youtube.com/{custom_url}"
-            title = channel_item.get("snippet", {}).get("title", "")
-            description = channel_item.get("snippet", {}).get("description", "")
-            sim_score = fuzzy_similarity(query, description)
-            video_count = channel_item.get("statistics", {}).get(
-                "videoCount", ""
-            )
-            subscriber_count = channel_item.get("statistics", {}).get(
-                "subscriberCount", ""
-            )
-            data.append(
-                (
-                    channel_id,
-                    title,
-                    url,
-                    description,
-                    video_count,
-                    subscriber_count,
-                    sim_score,
-                )
-            )
-        df = pd.DataFrame(
-            data,
-            columns=[
-                "Channel Id",
-                "Title",
-                "Url",
-                "Description",
-                "Videos",
-                "Subscribers",
-                "Similarity",
-            ],
+    for channel_item in channel_data.get("items", []):
+        channel_id = channel_item.get("id", "")
+        custom_url = channel_item.get("snippet", {}).get("customUrl", "")
+        url = f"https://www.youtube.com/{custom_url}"
+        title = channel_item.get("snippet", {}).get("title", "")
+        description = channel_item.get("snippet", {}).get("description", "")
+        sim_score = fuzzy_similarity(query, description)
+        video_count = channel_item.get("statistics", {}).get(
+            "videoCount", ""
         )
+        subscriber_count = channel_item.get("statistics", {}).get(
+            "subscriberCount", ""
+        )
+        data.append(
+            (
+                channel_id,
+                title,
+                url,
+                description,
+                video_count,
+                subscriber_count,
+                sim_score,
+            )
+        )
+    df = pd.DataFrame(
+        data,
+        columns=[
+            "Channel_Id",
+            "Title",
+            "Url",
+            "Description",
+            "Videos",
+            "Subscribers",
+            "Similarity",
+        ],
+    )
     return df
 
 
@@ -365,27 +389,27 @@ def transform_data(
 
     channel_df = transform_channel_data(query, channel_data)
 
-    combined_df = pd.merge(channel_df, comment_thread_df, on="Channel Id")
-    combined_df["Videos Rank"] = combined_df["Videos"].rank(
+    combined_df = pd.merge(channel_df, comment_thread_df, on="Channel_Id")
+    combined_df["Videos_Rank"] = combined_df["Videos"].rank(
         method="dense", ascending=False
     )
-    combined_df["Subscribers Rank"] = combined_df["Subscribers"].rank(
+    combined_df["Subscribers_Rank"] = combined_df["Subscribers"].rank(
         method="dense", ascending=False
     )
-    combined_df["Score Rank"] = combined_df["Score"].rank(
+    combined_df["Score_Rank"] = combined_df["Score"].rank(
         method="dense", ascending=False
     )
-    combined_df["Similarity Rank"] = combined_df["Similarity"].rank(
+    combined_df["Similarity_Rank"] = combined_df["Similarity"].rank(
         method="dense", ascending=False
     )
-    combined_df["Average Rank"] = (
-        combined_df["Videos Rank"]
-        + combined_df["Subscribers Rank"]
-        + combined_df["Score Rank"]
-        + combined_df["Similarity Rank"]
+    combined_df["Average_Rank"] = (
+        combined_df["Videos_Rank"]
+        + combined_df["Subscribers_Rank"]
+        + combined_df["Score_Rank"]
+        + combined_df["Similarity_Rank"]
     ) / 4.0
 
-    combined_df = combined_df.sort_values(by="Average Rank")
+    combined_df = combined_df.sort_values(by="Average_Rank")
     return combined_df
 
 

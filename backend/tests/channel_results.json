@@ -1,735 +1,1169 @@
 {
-    "items":
-    [
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "3J96B2hRB3ENUuBXqsf4LtBDnkM",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+    "items": [
+      {
+        "kind": "youtube#channel",
+        "etag": "hlRWuTon2ecLHLpaW44g2TkADE4",
+        "id": "UCuA-X-1adAwyB89zYDYt9og",
+        "snippet": {
+          "title": "Fuzzy",
+          "description": "Daily MLB Highlights, News & Everything Baseball ⚾️",
+          "customUrl": "@fuzzyfromyt",
+          "publishedAt": "2012-05-05T17:06:42Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kxhtIaT-EmC6IZxZAbEPBTTqteJy5-smbjQyQkjSTr0nY=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "ZPuM7BoWrAqub0zWV43jVnqLSWQ",
-                "id": "UC05cNJvMKzDLRPo59X2Xx7g",
-                "snippet": {
-                "title": "Los Angeles Dodgers",
-                "description": "Official YouTube account for the Los Angeles Dodgers.\nwww.dodgers.com\n\nwww.dodgerinsider.com\n\n \n\nFacebook.com/Dodgers\n\nInstagram.com/Dodgers\n\nTwitter.com/Dodgers\n\nTwitter.com/DodgerInsider\n\nSnapchat.com/Dodgers",
-                "customUrl": "@dodgers",
-                "publishedAt": "2015-08-18T18:52:17Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_kxDKyOCPHoyrnt48eKVi92zb2LQXAjmYDeX-_Nf2gd1Vv5=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_kxDKyOCPHoyrnt48eKVi92zb2LQXAjmYDeX-_Nf2gd1Vv5=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_kxDKyOCPHoyrnt48eKVi92zb2LQXAjmYDeX-_Nf2gd1Vv5=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "Los Angeles Dodgers",
-                    "description": "Official YouTube account for the Los Angeles Dodgers.\nwww.dodgers.com\n\nwww.dodgerinsider.com\n\n \n\nFacebook.com/Dodgers\n\nInstagram.com/Dodgers\n\nTwitter.com/Dodgers\n\nTwitter.com/DodgerInsider\n\nSnapchat.com/Dodgers"
-                }
-                },
-                "statistics": {
-                "viewCount": "117778264",
-                "subscriberCount": "442000",
-                "hiddenSubscriberCount": false,
-                "videoCount": "1144"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kxhtIaT-EmC6IZxZAbEPBTTqteJy5-smbjQyQkjSTr0nY=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kxhtIaT-EmC6IZxZAbEPBTTqteJy5-smbjQyQkjSTr0nY=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "Fuzzy",
+            "description": "Daily MLB Highlights, News & Everything Baseball ⚾️"
+          },
+          "country": "US"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "DQ5pkq0zAz5kswTNZWbjcyu63pc",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "381823453",
+          "subscriberCount": "554000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "3800"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "0ec-gkCsgqqhsj3NH3fHWDzOfHA",
+        "id": "UCWQXiB9DidR74rOPeupt8nQ",
+        "snippet": {
+          "title": "Made The Cut",
+          "description": "Weekly long form and daily short form videos about all things baseball! \n\nSubscribe for more!",
+          "customUrl": "@madethecut",
+          "publishedAt": "2016-11-23T18:36:42Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/wF5MWCE2s1d4P6Kz3q7D3BowLVPjxbjNtUO92Tq0qLvo2_TSGVYn6ijKXB8jkrRY_x9rCMGU1w=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "-nvqthT57BOGuPfPHmjVWAVdHLI",
-                "id": "UCqQo7ewe87aYAe7ub5UqXMw",
-                "snippet": {
-                "title": "House of Highlights",
-                "description": "️\u200d🔥EVERYTHING YOU NEED TO SEE IN SPORTS️\u200d🔥\n",
-                "customUrl": "@houseofhighlights",
-                "publishedAt": "2018-01-23T19:32:41Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/4H5WXKVzgQdZM8zUHU_otJCbtU8F7EA62IbEgLt68SAaXUXr1Z2CHIZpyh9uHSDGYP6oW2nUyQ=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/4H5WXKVzgQdZM8zUHU_otJCbtU8F7EA62IbEgLt68SAaXUXr1Z2CHIZpyh9uHSDGYP6oW2nUyQ=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/4H5WXKVzgQdZM8zUHU_otJCbtU8F7EA62IbEgLt68SAaXUXr1Z2CHIZpyh9uHSDGYP6oW2nUyQ=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "House of Highlights",
-                    "description": "️\u200d🔥EVERYTHING YOU NEED TO SEE IN SPORTS️\u200d🔥\n"
-                },
-                "country": "US"
-                },
-                "statistics": {
-                "viewCount": "14928312798",
-                "subscriberCount": "17400000",
-                "hiddenSubscriberCount": false,
-                "videoCount": "22114"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/wF5MWCE2s1d4P6Kz3q7D3BowLVPjxbjNtUO92Tq0qLvo2_TSGVYn6ijKXB8jkrRY_x9rCMGU1w=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/wF5MWCE2s1d4P6Kz3q7D3BowLVPjxbjNtUO92Tq0qLvo2_TSGVYn6ijKXB8jkrRY_x9rCMGU1w=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "Made The Cut",
+            "description": "Weekly long form and daily short form videos about all things baseball! \n\nSubscribe for more!"
+          },
+          "country": "US"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "MqWa83nfJKM-eWbFsW9ul6TEBvA",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "211107992",
+          "subscriberCount": "501000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "1096"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "78QhFCLq-5TZuOlqpfLaiteAJ-Q",
+        "id": "UCqQo7ewe87aYAe7ub5UqXMw",
+        "snippet": {
+          "title": "House of Highlights",
+          "description": "️‍🔥EVERYTHING YOU NEED TO SEE IN SPORTS️‍🔥\n",
+          "customUrl": "@houseofhighlights",
+          "publishedAt": "2018-01-23T19:32:41Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/4H5WXKVzgQdZM8zUHU_otJCbtU8F7EA62IbEgLt68SAaXUXr1Z2CHIZpyh9uHSDGYP6oW2nUyQ=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "eX6wjljfJAdTddxVr57bMiulr9U",
-                "id": "UCCPljZ6A_7jD0TC9xs_S39w",
-                "snippet": {
-                "title": "Dodger Nate",
-                "description": "TikTok & Instagram- dodgernate\n125k followers on TikTok ",
-                "customUrl": "@dodgernateyt",
-                "publishedAt": "2013-08-16T22:16:58Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/s4tBYuHK2D4PLT09MKbEyq-Et9cbQHjnZBFxi0g_FNgH_CROtsMhzpMItJfqABKl4M_54vqNvZw=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/s4tBYuHK2D4PLT09MKbEyq-Et9cbQHjnZBFxi0g_FNgH_CROtsMhzpMItJfqABKl4M_54vqNvZw=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/s4tBYuHK2D4PLT09MKbEyq-Et9cbQHjnZBFxi0g_FNgH_CROtsMhzpMItJfqABKl4M_54vqNvZw=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "Dodger Nate",
-                    "description": "TikTok & Instagram- dodgernate\n125k followers on TikTok "
-                }
-                },
-                "statistics": {
-                "viewCount": "20845962",
-                "subscriberCount": "13500",
-                "hiddenSubscriberCount": false,
-                "videoCount": "191"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/4H5WXKVzgQdZM8zUHU_otJCbtU8F7EA62IbEgLt68SAaXUXr1Z2CHIZpyh9uHSDGYP6oW2nUyQ=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/4H5WXKVzgQdZM8zUHU_otJCbtU8F7EA62IbEgLt68SAaXUXr1Z2CHIZpyh9uHSDGYP6oW2nUyQ=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "House of Highlights",
+            "description": "️‍🔥EVERYTHING YOU NEED TO SEE IN SPORTS️‍🔥\n"
+          },
+          "country": "US"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "2YGpVg93RDhjPZ5SWnkv0JWU94M",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "14943623194",
+          "subscriberCount": "17400000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "22157"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "1wUFrZ02KWIZ4UYPNufik7QY8RU",
+        "id": "UCgPtfIzCzShYp2kUb7HiWaQ",
+        "snippet": {
+          "title": "Victory Road Studios",
+          "description": "Welcome to Victory Road Studios — an award-winning, multi-platform media company at the intersection of sports and entertainment.We push creative boundaries through original content and strategic partnerships with elite athletes, top creators, visionary filmmakers, iconic brands, and leagues both emerging and legendary. \n\nWe're the studio behind \"Rabid Fans\" — the Webby-nominated animated sports series that flips fandom on its head — and the launchpad for premium stories like the upcoming 4-Part documentary the Brian Shaw Story, Victory Road is where the underdogs take center stage.  \n\nFrom raw documentaries to animated chaos and everything in between, we’re here to redefine how sports stories are told.\n\nFollow the madness — subscribe to Rabid Fans / https://www.youtube.com/@RabidFans\n",
+          "customUrl": "@victoryroadstudios",
+          "publishedAt": "2023-06-21T21:37:07.519648Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/syUIOpZd9C3DyX_WPT9T4ULzrD7b6cr39NZ0x6R_PffYD4jgGOvXEZJEe0nJEUot3vox2hp-4w=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "9bCfTIQg3tXREHAfAWw4gq6Legs",
-                "id": "UCja8sZ2T4ylIqjggA1Zuukg",
-                "snippet": {
-                "title": "CBS Sports",
-                "description": "Hello, friends 👋",
-                "customUrl": "@cbssports",
-                "publishedAt": "2007-07-19T10:28:44Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/jnGO8vkeg1R9IAaIHIej_SS9tzYXtyk54KwbHovEq2No3HfvV6mw2CYVIoFg2ThbFTnkUiSIBw=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/jnGO8vkeg1R9IAaIHIej_SS9tzYXtyk54KwbHovEq2No3HfvV6mw2CYVIoFg2ThbFTnkUiSIBw=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/jnGO8vkeg1R9IAaIHIej_SS9tzYXtyk54KwbHovEq2No3HfvV6mw2CYVIoFg2ThbFTnkUiSIBw=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "CBS Sports",
-                    "description": "Hello, friends 👋"
-                },
-                "country": "US"
-                },
-                "statistics": {
-                "viewCount": "1128725324",
-                "subscriberCount": "1030000",
-                "hiddenSubscriberCount": false,
-                "videoCount": "33478"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/syUIOpZd9C3DyX_WPT9T4ULzrD7b6cr39NZ0x6R_PffYD4jgGOvXEZJEe0nJEUot3vox2hp-4w=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/syUIOpZd9C3DyX_WPT9T4ULzrD7b6cr39NZ0x6R_PffYD4jgGOvXEZJEe0nJEUot3vox2hp-4w=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "Victory Road Studios",
+            "description": "Welcome to Victory Road Studios — an award-winning, multi-platform media company at the intersection of sports and entertainment.We push creative boundaries through original content and strategic partnerships with elite athletes, top creators, visionary filmmakers, iconic brands, and leagues both emerging and legendary. \n\nWe're the studio behind \"Rabid Fans\" — the Webby-nominated animated sports series that flips fandom on its head — and the launchpad for premium stories like the upcoming 4-Part documentary the Brian Shaw Story, Victory Road is where the underdogs take center stage.  \n\nFrom raw documentaries to animated chaos and everything in between, we’re here to redefine how sports stories are told.\n\nFollow the madness — subscribe to Rabid Fans / https://www.youtube.com/@RabidFans\n"
+          },
+          "country": "US"
         },
-                        
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "Zi285VhHyihwxJHrtTLiOwWpwhU",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "12867701",
+          "subscriberCount": "29000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "368"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "q3YJDKBMWxdSoZZs7R-R3C0tpFw",
+        "id": "UCvQftWY0u6Lszb0XBpGMSYg",
+        "snippet": {
+          "title": "Mae Chikka",
+          "description": "Hello everyone Welcome to my channel MAE CHIKKA.\n My channel is all about the famous love team  in the Philippines LIZQUEN...Alam kung napakahalagang malaman kung ano ang mga nagyayare sa kanila araw-araw kaya naman ibabahagi ko ang mga nakukuha kung daily updates o latest ganap patungkol sa kanila sa abut ng aking makakaya.Sana mapasaya ko po kayo sa bawat balitang ibibigay ko. Yun  lamang po,Sana patuloy ninyo akung  Suportahan.\nThank you so much in advance sa panunuod ng aking mga video.Walang iwanan😊PLEASE DON\"T FORGET TO SUBSCRIBE.",
+          "customUrl": "@lizquen_loveko",
+          "publishedAt": "2016-11-07T02:51:37Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/RlPFgvigQZh6FUCO1aF14ww4HBCcC1D-GchAo1oWiJPaeZ14zfIQ10K7WvojUpIiLNn-C8SlMw=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "sz9aXkOIzZ2KzJ5HxNaUeGvRxfY",
-                "id": "UC9f7wZNEBBPAp-PWCu5E8Lg",
-                "snippet": {
-                "title": "Latest Los Angeles Dodgers News",
-                "description": "Welcome to the ultimate Dodgers fan zone!\n\nIf you bleed Dodger blue or are just diving into the world of baseball, this channel is your one-stop destination for all things Los Angeles Dodgers. From nail-biting game recaps and player spotlights to exclusive interviews and in-depth analysis, we've got your Dodger fix covered like Clayton Kershaw on the mound. Join our community of die-hard Dodgers fans as we rally behind our boys in blue through the ups and downs of the MLB season.\n\nSo grab your foam finger, get ready to chant 'Let's Go Dodgers,' and let's embark on this epic journey through the world of Dodgers baseball together! It's more than a team, it's a way of life. Let's go Dodgers!",
-                "customUrl": "@latestlosangelesdodgersnews",
-                "publishedAt": "2024-04-01T02:24:06.806839Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/Sl9ihEDeQKkjGMJ3ZnX8c6AttiRgG6GIWCBbXEcVjUEA7GqA0lm8hIEvyRJI3qKcVIY8wZzbdQ=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/Sl9ihEDeQKkjGMJ3ZnX8c6AttiRgG6GIWCBbXEcVjUEA7GqA0lm8hIEvyRJI3qKcVIY8wZzbdQ=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/Sl9ihEDeQKkjGMJ3ZnX8c6AttiRgG6GIWCBbXEcVjUEA7GqA0lm8hIEvyRJI3qKcVIY8wZzbdQ=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "Latest Los Angeles Dodgers News",
-                    "description": "Welcome to the ultimate Dodgers fan zone!\n\nIf you bleed Dodger blue or are just diving into the world of baseball, this channel is your one-stop destination for all things Los Angeles Dodgers. From nail-biting game recaps and player spotlights to exclusive interviews and in-depth analysis, we've got your Dodger fix covered like Clayton Kershaw on the mound. Join our community of die-hard Dodgers fans as we rally behind our boys in blue through the ups and downs of the MLB season.\n\nSo grab your foam finger, get ready to chant 'Let's Go Dodgers,' and let's embark on this epic journey through the world of Dodgers baseball together! It's more than a team, it's a way of life. Let's go Dodgers!"
-                }
-                },
-                "statistics": {
-                "viewCount": "4319092",
-                "subscriberCount": "7720",
-                "hiddenSubscriberCount": false,
-                "videoCount": "1154"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/RlPFgvigQZh6FUCO1aF14ww4HBCcC1D-GchAo1oWiJPaeZ14zfIQ10K7WvojUpIiLNn-C8SlMw=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/RlPFgvigQZh6FUCO1aF14ww4HBCcC1D-GchAo1oWiJPaeZ14zfIQ10K7WvojUpIiLNn-C8SlMw=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "Mae Chikka",
+            "description": "Hello everyone Welcome to my channel MAE CHIKKA.\n My channel is all about the famous love team  in the Philippines LIZQUEN...Alam kung napakahalagang malaman kung ano ang mga nagyayare sa kanila araw-araw kaya naman ibabahagi ko ang mga nakukuha kung daily updates o latest ganap patungkol sa kanila sa abut ng aking makakaya.Sana mapasaya ko po kayo sa bawat balitang ibibigay ko. Yun  lamang po,Sana patuloy ninyo akung  Suportahan.\nThank you so much in advance sa panunuod ng aking mga video.Walang iwanan😊PLEASE DON\"T FORGET TO SUBSCRIBE."
+          },
+          "country": "SA"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "3eI11XPaDmeLrd3ngiv_bcowpEA",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "5518555",
+          "subscriberCount": "49200",
+          "hiddenSubscriberCount": false,
+          "videoCount": "152"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "hwpLFivCZ60NscuSY8vn0fwytEU",
+        "id": "UC5JV2g0vhv9_s2tHZtucYlQ",
+        "snippet": {
+          "title": "Dodgers Nation",
+          "description": "Welcome to the Official YouTube Channel of DodgersNation.com – your home for all things Los Angeles Dodgers! We bring you the latest Dodgers news, trade rumors, roster updates, and expert game analysis daily. Catch our daily shows for the freshest insights on Dodgers players, stats, injuries, and standings. Join us after every game for our post-game shows, where we dive deep into game highlights, big moments, and everything fans want to know. \n\nDon’t miss our interactive watch-along live streams, where you can join the DodgersNation community, chat live with fans, participate in inning-by-inning giveaways, and catch real-time reactions to all the action! Plus, get exclusive interviews, pre-game previews, and behind-the-scenes content you won’t find anywhere else. \n\nSubscribe now and hit the bell icon to stay up-to-date on the latest Dodgers news, scores, analysis, and live shows. \n\nWe’re here for every pitch, every home run, and every big moment!\n\n",
+          "customUrl": "@dodgersnationtv",
+          "publishedAt": "2015-10-22T23:31:29Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_mQjlP1eO0LMyZRE2Qin-N1fRQhJW3BWHen9M7QDTmkJw=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "VV5LxkabQHqMgGWggvzKEP-SqBs",
-                "id": "UCl9E4Zxa8CVr2LBLD0_TaNg",
-                "snippet": {
-                "title": "Jomboy Media",
-                "description": "Breakdowns, podcasts and more",
-                "customUrl": "@jomboymedia",
-                "publishedAt": "2006-12-28T20:29:28Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/d2JSr-1Ukp9fAjGCU8Z34dYXAKx-tANlplfesQwNK1YdHJzFgnPTBwpund2pbF1sLWHEKDE7wA=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/d2JSr-1Ukp9fAjGCU8Z34dYXAKx-tANlplfesQwNK1YdHJzFgnPTBwpund2pbF1sLWHEKDE7wA=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/d2JSr-1Ukp9fAjGCU8Z34dYXAKx-tANlplfesQwNK1YdHJzFgnPTBwpund2pbF1sLWHEKDE7wA=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "Jomboy Media",
-                    "description": "Breakdowns, podcasts and more"
-                },
-                "country": "US"
-                },
-                "statistics": {
-                "viewCount": "1600620150",
-                "subscriberCount": "2140000",
-                "hiddenSubscriberCount": false,
-                "videoCount": "3481"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_mQjlP1eO0LMyZRE2Qin-N1fRQhJW3BWHen9M7QDTmkJw=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_mQjlP1eO0LMyZRE2Qin-N1fRQhJW3BWHen9M7QDTmkJw=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "Dodgers Nation",
+            "description": "Welcome to the Official YouTube Channel of DodgersNation.com – your home for all things Los Angeles Dodgers! We bring you the latest Dodgers news, trade rumors, roster updates, and expert game analysis daily. Catch our daily shows for the freshest insights on Dodgers players, stats, injuries, and standings. Join us after every game for our post-game shows, where we dive deep into game highlights, big moments, and everything fans want to know. \n\nDon’t miss our interactive watch-along live streams, where you can join the DodgersNation community, chat live with fans, participate in inning-by-inning giveaways, and catch real-time reactions to all the action! Plus, get exclusive interviews, pre-game previews, and behind-the-scenes content you won’t find anywhere else. \n\nSubscribe now and hit the bell icon to stay up-to-date on the latest Dodgers news, scores, analysis, and live shows. \n\nWe’re here for every pitch, every home run, and every big moment!\n\n"
+          },
+          "country": "US"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "c10v59Hn58EM7GV0UQGtwcFC-KY",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "57810187",
+          "subscriberCount": "130000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "5028"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "dp8Lv2I0RcvnFBK8sjcKDsqzk6Q",
+        "id": "UCNEmh_EFKWAu5Bujy6QGeXw",
+        "snippet": {
+          "title": "Dodger Blue",
+          "description": "DodgerBlue.com is run by credentialed reporters and your trusted source for the latest Los Angeles Dodgers news, rumors, opinion, score updates and more involving Shohei Ohtani, Mookie Betts, Freddie Freeman and the entire team. Join the conversation with Dodgers fans everywhere!",
+          "customUrl": "@dodgerblue1958",
+          "publishedAt": "2013-01-25T20:05:05Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/s_WqKebxzzYqTDLUdEDvWIeUtOMMcz1AsDd7J97CwhOIJtYs_61rC_O1HMSwxDiXKNh3yyE5fIg=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "rzI8KTy23Ie5grL6WvswdxjVBBo",
-                "id": "UCNEmh_EFKWAu5Bujy6QGeXw",
-                "snippet": {
-                "title": "Dodger Blue",
-                "description": "DodgerBlue.com is run by credentialed reporters and your trusted source for the latest Los Angeles Dodgers news, rumors, opinion, score updates and more involving Shohei Ohtani, Mookie Betts, Freddie Freeman and the entire team. Join the conversation with Dodgers fans everywhere!",
-                "customUrl": "@dodgerblue1958",
-                "publishedAt": "2013-01-25T20:05:05Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/s_WqKebxzzYqTDLUdEDvWIeUtOMMcz1AsDd7J97CwhOIJtYs_61rC_O1HMSwxDiXKNh3yyE5fIg=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/s_WqKebxzzYqTDLUdEDvWIeUtOMMcz1AsDd7J97CwhOIJtYs_61rC_O1HMSwxDiXKNh3yyE5fIg=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/s_WqKebxzzYqTDLUdEDvWIeUtOMMcz1AsDd7J97CwhOIJtYs_61rC_O1HMSwxDiXKNh3yyE5fIg=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "Dodger Blue",
-                    "description": "DodgerBlue.com is run by credentialed reporters and your trusted source for the latest Los Angeles Dodgers news, rumors, opinion, score updates and more involving Shohei Ohtani, Mookie Betts, Freddie Freeman and the entire team. Join the conversation with Dodgers fans everywhere!"
-                },
-                "country": "US"
-                },
-                "statistics": {
-                "viewCount": "40182456",
-                "subscriberCount": "87900",
-                "hiddenSubscriberCount": false,
-                "videoCount": "6030"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/s_WqKebxzzYqTDLUdEDvWIeUtOMMcz1AsDd7J97CwhOIJtYs_61rC_O1HMSwxDiXKNh3yyE5fIg=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/s_WqKebxzzYqTDLUdEDvWIeUtOMMcz1AsDd7J97CwhOIJtYs_61rC_O1HMSwxDiXKNh3yyE5fIg=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "Dodger Blue",
+            "description": "DodgerBlue.com is run by credentialed reporters and your trusted source for the latest Los Angeles Dodgers news, rumors, opinion, score updates and more involving Shohei Ohtani, Mookie Betts, Freddie Freeman and the entire team. Join the conversation with Dodgers fans everywhere!"
+          },
+          "country": "US"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "_2Avb5cvkwT9jkSgroqJgUfsYLw",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "40324261",
+          "subscriberCount": "88000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "6045"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "AgwEvSCAho0FB3P5_qJKhOlf4Pg",
+        "id": "UCYbN-4QeDOp3oRU4TpPvj-g",
+        "snippet": {
+          "title": "Locked On Dodgers",
+          "description": "The Locked On Dodgers Podcast is your daily podcast about the Los Angeles Dodgers, hosted by Travis Rodgers and Harry Ruiz. If you want smart, passionate takes on the Dodgers every morning while you drive to work, Locked On Dodgers is the ticket.",
+          "customUrl": "@lockedondodgers",
+          "publishedAt": "2021-09-01T15:11:21.649003Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/HIaeKO4Kul_socDwJoslceLsHiD67fbfdrmLXiveBATU1vke79TNNK_neJzp9pSNza3xY5HZ=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "HPs6cAsqPErl615hA9ta925oKBs",
-                "id": "UC_tgjd_DzC5mUp69ZyV3ZjQ",
-                "snippet": {
-                "title": "Barberlike",
-                "description": "BIENVENIDOS A MI CANAL DE YOUTUBE DONDE ENCONTRARAS MUCHO CONTENIDO DIFERENTES COMO: ENTREVISTAS  / FARANDULAS / DEPORTES/\n\nEN ESTE CANAL TE VAS A ENTRETENER UN MUNDO ( Barberlike) \n\nSuscríbete si te gusto el Contenido👆\n\nSígueme en instagram: https://www.instagram.com/\nbarberlike_/?hl=es-la\n\nSígueme en facebook:  https://m.facebook.com/?_rdr#!/barberlike/\n\nActiva la campanita 🛎 para el siguiente video ! Gracias ¡\n\n\n",
-                "customUrl": "@barberlike",
-                "publishedAt": "2014-03-02T12:26:52Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/3aTWNYNNuxjAcvRqhnBuFI1TerPtAW2mLJlVLRYKhdDa8X3InejEGptQ2Hru1y6Jr8xZ3rUt9A=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/3aTWNYNNuxjAcvRqhnBuFI1TerPtAW2mLJlVLRYKhdDa8X3InejEGptQ2Hru1y6Jr8xZ3rUt9A=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/3aTWNYNNuxjAcvRqhnBuFI1TerPtAW2mLJlVLRYKhdDa8X3InejEGptQ2Hru1y6Jr8xZ3rUt9A=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "Barberlike",
-                    "description": "BIENVENIDOS A MI CANAL DE YOUTUBE DONDE ENCONTRARAS MUCHO CONTENIDO DIFERENTES COMO: ENTREVISTAS  / FARANDULAS / DEPORTES/\n\nEN ESTE CANAL TE VAS A ENTRETENER UN MUNDO ( Barberlike) \n\nSuscríbete si te gusto el Contenido👆\n\nSígueme en instagram: https://www.instagram.com/\nbarberlike_/?hl=es-la\n\nSígueme en facebook:  https://m.facebook.com/?_rdr#!/barberlike/\n\nActiva la campanita 🛎 para el siguiente video ! Gracias ¡\n\n\n"
-                },
-                "country": "DO"
-                },
-                "statistics": {
-                "viewCount": "3327166",
-                "subscriberCount": "48600",
-                "hiddenSubscriberCount": false,
-                "videoCount": "53"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/HIaeKO4Kul_socDwJoslceLsHiD67fbfdrmLXiveBATU1vke79TNNK_neJzp9pSNza3xY5HZ=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/HIaeKO4Kul_socDwJoslceLsHiD67fbfdrmLXiveBATU1vke79TNNK_neJzp9pSNza3xY5HZ=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "Locked On Dodgers",
+            "description": "The Locked On Dodgers Podcast is your daily podcast about the Los Angeles Dodgers, hosted by Travis Rodgers and Harry Ruiz. If you want smart, passionate takes on the Dodgers every morning while you drive to work, Locked On Dodgers is the ticket."
+          },
+          "country": "US"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "KXnsVYgL5Filo6lR8rp6PGY8_jE",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "2279174",
+          "subscriberCount": "9360",
+          "hiddenSubscriberCount": false,
+          "videoCount": "1311"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "Hb5snHM7ikwh2A9vvdVA43V-xKs",
+        "id": "UCSoN6sw15xEJJjb6RecTg9A",
+        "snippet": {
+          "title": "Bklyn_reau",
+          "description": "LET'S LAUGH TOGETHER...",
+          "customUrl": "@bklynreau",
+          "publishedAt": "2018-08-17T06:51:43Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kmvM1VtDWLARj-TVp_2Yg_ZKJm0t17RxAptZ7xlTFWjxc=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "JlfD2kVk1fCOEVT7wCzIiFoYA7M",
-                "id": "UC21wDWqEcXkVf7BwIq1GRVg",
-                "snippet": {
-                "title": "Top Five Moments",
-                "description": "Daily Sports Content for your Entertainment!\nTikTok: @topfivemoments\n",
-                "customUrl": "@topfivemoments_yt",
-                "publishedAt": "2025-01-12T03:58:27.279776Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/QH-H1UlN2lqCcpi92QX7Xj2oY02QIh9V69_OMMxUylq-8dWuAOzEFOvvTcF-oCahqL3UTX2-3Q=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/QH-H1UlN2lqCcpi92QX7Xj2oY02QIh9V69_OMMxUylq-8dWuAOzEFOvvTcF-oCahqL3UTX2-3Q=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/QH-H1UlN2lqCcpi92QX7Xj2oY02QIh9V69_OMMxUylq-8dWuAOzEFOvvTcF-oCahqL3UTX2-3Q=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "Top Five Moments",
-                    "description": "Daily Sports Content for your Entertainment!\nTikTok: @topfivemoments\n"
-                }
-                },
-                "statistics": {
-                "viewCount": "14860635",
-                "subscriberCount": "5990",
-                "hiddenSubscriberCount": false,
-                "videoCount": "96"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kmvM1VtDWLARj-TVp_2Yg_ZKJm0t17RxAptZ7xlTFWjxc=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kmvM1VtDWLARj-TVp_2Yg_ZKJm0t17RxAptZ7xlTFWjxc=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "Bklyn_reau",
+            "description": "LET'S LAUGH TOGETHER..."
+          },
+          "country": "US"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "rMEaMB9Ye-3BeHXu3N57ATEPoR0",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "24789626",
+          "subscriberCount": "90400",
+          "hiddenSubscriberCount": false,
+          "videoCount": "4742"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "gL2sFpkUkqMuXHwr8O8AvZhLlXg",
+        "id": "UC9-OpMMVoNP5o10_Iyq7Ndw",
+        "snippet": {
+          "title": "Bleacher Report",
+          "description": "The official YouTube page of Bleacher Report. Subscribe to see sports highlights, news, features, analysis and animations that drive fandom and bring the culture of sports to life.",
+          "customUrl": "@bleacherreport",
+          "publishedAt": "2007-09-14T18:23:54Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/DqADENRwYEp0MJg9Li1IUebRpFmXryH59PkXG9Ko2EySPrRsQgcAe9uHlr6hBjtLt_9XuY0L6g=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "G7g5to4COvYKh7XRc65fiigp9wg",
-                "id": "UC3dtGgmaJfzWFgx7YWIUpKg",
-                "snippet": {
-                "title": "ESPN Australia",
-                "description": "",
-                "customUrl": "@espnausnz",
-                "publishedAt": "2011-06-30T02:25:01Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_k7XA5c-w4p1gusqrNRFD9ssP6NlGtCmn52_ocPbMxphQ=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_k7XA5c-w4p1gusqrNRFD9ssP6NlGtCmn52_ocPbMxphQ=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_k7XA5c-w4p1gusqrNRFD9ssP6NlGtCmn52_ocPbMxphQ=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "ESPN Australia",
-                    "description": ""
-                },
-                "country": "AU"
-                },
-                "statistics": {
-                "viewCount": "19719207",
-                "subscriberCount": "34000",
-                "hiddenSubscriberCount": false,
-                "videoCount": "3494"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/DqADENRwYEp0MJg9Li1IUebRpFmXryH59PkXG9Ko2EySPrRsQgcAe9uHlr6hBjtLt_9XuY0L6g=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/DqADENRwYEp0MJg9Li1IUebRpFmXryH59PkXG9Ko2EySPrRsQgcAe9uHlr6hBjtLt_9XuY0L6g=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "Bleacher Report",
+            "description": "The official YouTube page of Bleacher Report. Subscribe to see sports highlights, news, features, analysis and animations that drive fandom and bring the culture of sports to life."
+          },
+          "country": "US"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "QajImjjE2POaG2k2uY14QEtO5OA",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "3297758950",
+          "subscriberCount": "4650000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "12797"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "9FB2BFsYaBFOtOAQkRc9XhTu6x0",
+        "id": "UCI-K3cqRc7whDl_DAC_trYw",
+        "snippet": {
+          "title": "hwikky",
+          "description": "🔵 hololive + life content creator & streamer\n\n✨ Support & Follow hwikky\n- X (Twitter): x.com/hwikkyofficial\n- Patreon: patreon.com/hwikky\n- Ko-fi: ko-fi.com/hwikky\n\n☄️ Sponsored by HYTE\n-  Hoshimachi Suisei PC Case + Keycap & Desk Pad Bundle Pre-order NOW -\n👉 Get yours here (please) https://hyte.co/hwikky-hololive\n",
+          "customUrl": "@hwikkyog",
+          "publishedAt": "2020-12-02T20:09:35.335252Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/BF7WEgRQSxHxgv82a2F8IKYKNY8U67wibLVejSIUrj-kZXuC2e4KmkIeoZmKxf6j-4e9SZnNrg=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "aMzSu4j9axhQDIVP6Feqe5qrSp8",
-                "id": "UCHl8qT8tApZ0Ove7WnthlyQ",
-                "snippet": {
-                "title": "The Sports Lounge ",
-                "description": "All Eyes On 50k Subscribers Starts Now 🔥🔥😎 Lets Gooooo🤘🏾🤘🏾\n \nThis Channel Was Made To Give The Sports Fans At Work Or Busy With Life To Come In The Lounge And Vibe Out Enjoy The Chat and Create The Best Environment For You If You See My Emote Then I’m at Work But In The Chat But If I’m Available I’ll Jump In The Stream 👀🤘🏾‼️\n\nI’m A LA Born And Raised Native So My Team Are NBA (Lakers) NFL (Rams) MLB (Dodgers) NHL (Kings). \n\n",
-                "customUrl": "@thesportslounge0921",
-                "publishedAt": "2022-07-27T14:15:50.91857Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/MydhMHQgJkKuS5Ece3Jp5FydTS3BuE1vQF51KJArnejhZR-eT4lgGiBNTrVfyTjUkaYp5ZoybA=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/MydhMHQgJkKuS5Ece3Jp5FydTS3BuE1vQF51KJArnejhZR-eT4lgGiBNTrVfyTjUkaYp5ZoybA=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/MydhMHQgJkKuS5Ece3Jp5FydTS3BuE1vQF51KJArnejhZR-eT4lgGiBNTrVfyTjUkaYp5ZoybA=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "The Sports Lounge ",
-                    "description": "All Eyes On 50k Subscribers Starts Now 🔥🔥😎 Lets Gooooo🤘🏾🤘🏾\n \nThis Channel Was Made To Give The Sports Fans At Work Or Busy With Life To Come In The Lounge And Vibe Out Enjoy The Chat and Create The Best Environment For You If You See My Emote Then I’m at Work But In The Chat But If I’m Available I’ll Jump In The Stream 👀🤘🏾‼️\n\nI’m A LA Born And Raised Native So My Team Are NBA (Lakers) NFL (Rams) MLB (Dodgers) NHL (Kings). \n\n"
-                },
-                "country": "US"
-                },
-                "statistics": {
-                "viewCount": "19544100",
-                "subscriberCount": "42700",
-                "hiddenSubscriberCount": false,
-                "videoCount": "1462"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/BF7WEgRQSxHxgv82a2F8IKYKNY8U67wibLVejSIUrj-kZXuC2e4KmkIeoZmKxf6j-4e9SZnNrg=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/BF7WEgRQSxHxgv82a2F8IKYKNY8U67wibLVejSIUrj-kZXuC2e4KmkIeoZmKxf6j-4e9SZnNrg=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "defaultLanguage": "en",
+          "localized": {
+            "title": "hwikky",
+            "description": "🔵 hololive + life content creator & streamer\n\n✨ Support & Follow hwikky\n- X (Twitter): x.com/hwikkyofficial\n- Patreon: patreon.com/hwikky\n- Ko-fi: ko-fi.com/hwikky\n\n☄️ Sponsored by HYTE\n-  Hoshimachi Suisei PC Case + Keycap & Desk Pad Bundle Pre-order NOW -\n👉 Get yours here (please) https://hyte.co/hwikky-hololive\n"
+          },
+          "country": "KR"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "64GOo1sabFYZbnE2Yv21BeWdl_M",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "7615639",
+          "subscriberCount": "45000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "151"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "4fGY-zK46lQcdgxQ5mEeEjnF4N4",
+        "id": "UCwNqHDsnBCKT-olwJwIFyfg",
+        "snippet": {
+          "title": "FOX Sports",
+          "description": "Welcome to the official FOX Sports YouTube channel, your go-to destination for the best sports action and analysis! Here, you’ll find thrilling highlights, in-depth commentary, and expert insights on all your favorite sports. Whether you're a fan of the NFL, MLB, College Football, international soccer, bowling, or more, we’ve got you covered. Stay up to date with the latest game highlights, breaking news, and exclusive content from the world’s top sporting events. Subscribe and never miss a moment of the action!\n",
+          "customUrl": "@foxsports",
+          "publishedAt": "2006-06-05T15:03:01Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kRD_CzEE876U_cVjUDaMF-hFzDQB906eoYWLq1JT0u99Q=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "sQru87qoQwrN7YmKOBo-hmywEuU",
-                "id": "UCwNqHDsnBCKT-olwJwIFyfg",
-                "snippet": {
-                "title": "FOX Sports",
-                "description": "Welcome to the official FOX Sports YouTube channel, your go-to destination for the best sports action and analysis! Here, you’ll find thrilling highlights, in-depth commentary, and expert insights on all your favorite sports. Whether you're a fan of the NFL, MLB, College Football, international soccer, bowling, or more, we’ve got you covered. Stay up to date with the latest game highlights, breaking news, and exclusive content from the world’s top sporting events. Subscribe and never miss a moment of the action!\n",
-                "customUrl": "@foxsports",
-                "publishedAt": "2006-06-05T15:03:01Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_kRD_CzEE876U_cVjUDaMF-hFzDQB906eoYWLq1JT0u99Q=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_kRD_CzEE876U_cVjUDaMF-hFzDQB906eoYWLq1JT0u99Q=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_kRD_CzEE876U_cVjUDaMF-hFzDQB906eoYWLq1JT0u99Q=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "FOX Sports",
-                    "description": "Welcome to the official FOX Sports YouTube channel, your go-to destination for the best sports action and analysis! Here, you’ll find thrilling highlights, in-depth commentary, and expert insights on all your favorite sports. Whether you're a fan of the NFL, MLB, College Football, international soccer, bowling, or more, we’ve got you covered. Stay up to date with the latest game highlights, breaking news, and exclusive content from the world’s top sporting events. Subscribe and never miss a moment of the action!\n"
-                }
-                },
-                "statistics": {
-                "viewCount": "781701376",
-                "subscriberCount": "1370000",
-                "hiddenSubscriberCount": false,
-                "videoCount": "6985"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kRD_CzEE876U_cVjUDaMF-hFzDQB906eoYWLq1JT0u99Q=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kRD_CzEE876U_cVjUDaMF-hFzDQB906eoYWLq1JT0u99Q=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "FOX Sports",
+            "description": "Welcome to the official FOX Sports YouTube channel, your go-to destination for the best sports action and analysis! Here, you’ll find thrilling highlights, in-depth commentary, and expert insights on all your favorite sports. Whether you're a fan of the NFL, MLB, College Football, international soccer, bowling, or more, we’ve got you covered. Stay up to date with the latest game highlights, breaking news, and exclusive content from the world’s top sporting events. Subscribe and never miss a moment of the action!\n"
+          }
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "4V44OMyCLE2gu4rYSlYoTpSYJfI",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "782980072",
+          "subscriberCount": "1370000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "7002"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "PHbStX3JZntUVWjx_hdYc9xRiPQ",
+        "id": "UCXjvsikVclbNRGRlzr8jTEg",
+        "snippet": {
+          "title": "Baseball Doesn't Exist",
+          "description": "",
+          "customUrl": "@baseballdoesntexist",
+          "publishedAt": "2020-08-21T19:55:48.735843Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/IjI0EOd_r-c8ILELSDEGtQ6iSfXlhfbT8_gjdYcK003Ky0WXTsGd88MaijxK5eJVk73SeRDbx5A=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "tRL2imF5sh7faVYac-5TFjMnRZY",
-                "id": "UCe55MfGayC_ewkBTcc_Z8QA",
-                "snippet": {
-                "title": "Charlie baseball",
-                "description": "Baseball Lover? Join my trip! \n",
-                "customUrl": "@charliebaseball99",
-                "publishedAt": "2015-07-28T20:53:46Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/zXcDk_Kq8S6xSJ8OWUDUET2peBzNSf5dm9udAdB4E5unMZwf7OY8kxNbgvtPyJbDMDwGcyH7PQ=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/zXcDk_Kq8S6xSJ8OWUDUET2peBzNSf5dm9udAdB4E5unMZwf7OY8kxNbgvtPyJbDMDwGcyH7PQ=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/zXcDk_Kq8S6xSJ8OWUDUET2peBzNSf5dm9udAdB4E5unMZwf7OY8kxNbgvtPyJbDMDwGcyH7PQ=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "Charlie baseball",
-                    "description": "Baseball Lover? Join my trip! \n"
-                }
-                },
-                "statistics": {
-                "viewCount": "1751611",
-                "subscriberCount": "890",
-                "hiddenSubscriberCount": false,
-                "videoCount": "265"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/IjI0EOd_r-c8ILELSDEGtQ6iSfXlhfbT8_gjdYcK003Ky0WXTsGd88MaijxK5eJVk73SeRDbx5A=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/IjI0EOd_r-c8ILELSDEGtQ6iSfXlhfbT8_gjdYcK003Ky0WXTsGd88MaijxK5eJVk73SeRDbx5A=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "Baseball Doesn't Exist",
+            "description": ""
+          }
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "LhqFHCEPyLmnRLxNEpE-WEunVdI",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "645367266",
+          "subscriberCount": "1000000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "204"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "QLPuoKE5q9bF3beczJZXbAwo2t8",
+        "id": "UCHl8qT8tApZ0Ove7WnthlyQ",
+        "snippet": {
+          "title": "The Sports Lounge ",
+          "description": "All Eyes On 50k Subscribers Starts Now 🔥🔥😎 Lets Gooooo🤘🏾🤘🏾\n \nThis Channel Was Made To Give The Sports Fans At Work Or Busy With Life To Come In The Lounge And Vibe Out Enjoy The Chat and Create The Best Environment For You If You See My Emote Then I’m at Work But In The Chat But If I’m Available I’ll Jump In The Stream 👀🤘🏾‼️\n\nI’m A LA Born And Raised Native So My Team Are NBA (Lakers) NFL (Rams) MLB (Dodgers) NHL (Kings). \n\n",
+          "customUrl": "@thesportslounge0921",
+          "publishedAt": "2022-07-27T14:15:50.91857Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/MydhMHQgJkKuS5Ece3Jp5FydTS3BuE1vQF51KJArnejhZR-eT4lgGiBNTrVfyTjUkaYp5ZoybA=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "6AsJPlG3aXTxN0obtaUaqBh4KoM",
-                "id": "UC5JV2g0vhv9_s2tHZtucYlQ",
-                "snippet": {
-                "title": "Dodgers Nation",
-                "description": "Welcome to the Official YouTube Channel of DodgersNation.com – your home for all things Los Angeles Dodgers! We bring you the latest Dodgers news, trade rumors, roster updates, and expert game analysis daily. Catch our daily shows for the freshest insights on Dodgers players, stats, injuries, and standings. Join us after every game for our post-game shows, where we dive deep into game highlights, big moments, and everything fans want to know. \n\nDon’t miss our interactive watch-along live streams, where you can join the DodgersNation community, chat live with fans, participate in inning-by-inning giveaways, and catch real-time reactions to all the action! Plus, get exclusive interviews, pre-game previews, and behind-the-scenes content you won’t find anywhere else. \n\nSubscribe now and hit the bell icon to stay up-to-date on the latest Dodgers news, scores, analysis, and live shows. \n\nWe’re here for every pitch, every home run, and every big moment!\n\n",
-                "customUrl": "@dodgersnationtv",
-                "publishedAt": "2015-10-22T23:31:29Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_mQjlP1eO0LMyZRE2Qin-N1fRQhJW3BWHen9M7QDTmkJw=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_mQjlP1eO0LMyZRE2Qin-N1fRQhJW3BWHen9M7QDTmkJw=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/ytc/AIdro_mQjlP1eO0LMyZRE2Qin-N1fRQhJW3BWHen9M7QDTmkJw=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "Dodgers Nation",
-                    "description": "Welcome to the Official YouTube Channel of DodgersNation.com – your home for all things Los Angeles Dodgers! We bring you the latest Dodgers news, trade rumors, roster updates, and expert game analysis daily. Catch our daily shows for the freshest insights on Dodgers players, stats, injuries, and standings. Join us after every game for our post-game shows, where we dive deep into game highlights, big moments, and everything fans want to know. \n\nDon’t miss our interactive watch-along live streams, where you can join the DodgersNation community, chat live with fans, participate in inning-by-inning giveaways, and catch real-time reactions to all the action! Plus, get exclusive interviews, pre-game previews, and behind-the-scenes content you won’t find anywhere else. \n\nSubscribe now and hit the bell icon to stay up-to-date on the latest Dodgers news, scores, analysis, and live shows. \n\nWe’re here for every pitch, every home run, and every big moment!\n\n"
-                },
-                "country": "US"
-                },
-                "statistics": {
-                "viewCount": "57438646",
-                "subscriberCount": "129000",
-                "hiddenSubscriberCount": false,
-                "videoCount": "5011"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/MydhMHQgJkKuS5Ece3Jp5FydTS3BuE1vQF51KJArnejhZR-eT4lgGiBNTrVfyTjUkaYp5ZoybA=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/MydhMHQgJkKuS5Ece3Jp5FydTS3BuE1vQF51KJArnejhZR-eT4lgGiBNTrVfyTjUkaYp5ZoybA=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
+          },
+          "localized": {
+            "title": "The Sports Lounge ",
+            "description": "All Eyes On 50k Subscribers Starts Now 🔥🔥😎 Lets Gooooo🤘🏾🤘🏾\n \nThis Channel Was Made To Give The Sports Fans At Work Or Busy With Life To Come In The Lounge And Vibe Out Enjoy The Chat and Create The Best Environment For You If You See My Emote Then I’m at Work But In The Chat But If I’m Available I’ll Jump In The Stream 👀🤘🏾‼️\n\nI’m A LA Born And Raised Native So My Team Are NBA (Lakers) NFL (Rams) MLB (Dodgers) NHL (Kings). \n\n"
+          },
+          "country": "US"
         },
-        {
-            "kind": "youtube#channelListResponse",
-            "etag": "8k2Y_uw2bcVYl5x1fQV5uubvt38",
-            "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 5
+        "statistics": {
+          "viewCount": "19611754",
+          "subscriberCount": "42800",
+          "hiddenSubscriberCount": false,
+          "videoCount": "1465"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "gOWaT9GWlR_JdrHX8BEt_j-yV5k",
+        "id": "UC3RPfeyaEIPosC4eIcNr4Gw",
+        "snippet": {
+          "title": "Houston Astros",
+          "description": "",
+          "customUrl": "@astros",
+          "publishedAt": "2015-08-12T21:09:40Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/G1eqTxPxPx4nGWxoyxTSYhzx8W611FDW42EwtHvospS23GSHsx93KmCIeHtL8jqn9Mkxuy2iyJE=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
             },
-            "items": [
-            {
-                "kind": "youtube#channel",
-                "etag": "q96brqo246wbWgPuFU6UbqS_Bp0",
-                "id": "UC9-OpMMVoNP5o10_Iyq7Ndw",
-                "snippet": {
-                "title": "Bleacher Report",
-                "description": "The official YouTube page of Bleacher Report. Subscribe to see sports highlights, news, features, analysis and animations that drive fandom and bring the culture of sports to life.",
-                "customUrl": "@bleacherreport",
-                "publishedAt": "2007-09-14T18:23:54Z",
-                "thumbnails": {
-                    "default": {
-                    "url": "https://yt3.ggpht.com/DqADENRwYEp0MJg9Li1IUebRpFmXryH59PkXG9Ko2EySPrRsQgcAe9uHlr6hBjtLt_9XuY0L6g=s88-c-k-c0x00ffffff-no-rj",
-                    "width": 88,
-                    "height": 88
-                    },
-                    "medium": {
-                    "url": "https://yt3.ggpht.com/DqADENRwYEp0MJg9Li1IUebRpFmXryH59PkXG9Ko2EySPrRsQgcAe9uHlr6hBjtLt_9XuY0L6g=s240-c-k-c0x00ffffff-no-rj",
-                    "width": 240,
-                    "height": 240
-                    },
-                    "high": {
-                    "url": "https://yt3.ggpht.com/DqADENRwYEp0MJg9Li1IUebRpFmXryH59PkXG9Ko2EySPrRsQgcAe9uHlr6hBjtLt_9XuY0L6g=s800-c-k-c0x00ffffff-no-rj",
-                    "width": 800,
-                    "height": 800
-                    }
-                },
-                "localized": {
-                    "title": "Bleacher Report",
-                    "description": "The official YouTube page of Bleacher Report. Subscribe to see sports highlights, news, features, analysis and animations that drive fandom and bring the culture of sports to life."
-                },
-                "country": "US"
-                },
-                "statistics": {
-                "viewCount": "3289882316",
-                "subscriberCount": "4650000",
-                "hiddenSubscriberCount": false,
-                "videoCount": "12766"
-                }
+            "medium": {
+              "url": "https://yt3.ggpht.com/G1eqTxPxPx4nGWxoyxTSYhzx8W611FDW42EwtHvospS23GSHsx93KmCIeHtL8jqn9Mkxuy2iyJE=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/G1eqTxPxPx4nGWxoyxTSYhzx8W611FDW42EwtHvospS23GSHsx93KmCIeHtL8jqn9Mkxuy2iyJE=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
             }
-            ]
-        }                                                
+          },
+          "localized": {
+            "title": "Houston Astros",
+            "description": ""
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "19618546",
+          "subscriberCount": "95500",
+          "hiddenSubscriberCount": false,
+          "videoCount": "628"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "AflUrkNRllU0xqizLDi6kSpJV68",
+        "id": "UChm4iJlUMC8A8D3oTHOOc8g",
+        "snippet": {
+          "title": "obieats",
+          "description": "Follow me on: \nInstagram : @obieats \nhttps://www.instagram.com/obieats/\n\nTiktok: @obieats \nhttps://www.tiktok.com/@obieats\n\nFacebook: @obieats \nhttps://www.facebook.com/obieats/?tn-...\n\nBUSINESS INQUIRIES:\ncontact@obieats.com\n",
+          "customUrl": "@obieats",
+          "publishedAt": "2019-05-29T22:57:25Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/6P8DzPYuSM_2Gn10aA3oIoW1sFyv_9dEWgySFh8BbyeMKg7nZz6WvPtndYDggOOsBG6YgyNuff4=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/6P8DzPYuSM_2Gn10aA3oIoW1sFyv_9dEWgySFh8BbyeMKg7nZz6WvPtndYDggOOsBG6YgyNuff4=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/6P8DzPYuSM_2Gn10aA3oIoW1sFyv_9dEWgySFh8BbyeMKg7nZz6WvPtndYDggOOsBG6YgyNuff4=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "obieats",
+            "description": "Follow me on: \nInstagram : @obieats \nhttps://www.instagram.com/obieats/\n\nTiktok: @obieats \nhttps://www.tiktok.com/@obieats\n\nFacebook: @obieats \nhttps://www.facebook.com/obieats/?tn-...\n\nBUSINESS INQUIRIES:\ncontact@obieats.com\n"
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "26664729",
+          "subscriberCount": "59300",
+          "hiddenSubscriberCount": false,
+          "videoCount": "558"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "thdsJn5vcRZVQnujGjTvaON0F10",
+        "id": "UCl9E4Zxa8CVr2LBLD0_TaNg",
+        "snippet": {
+          "title": "Jomboy Media",
+          "description": "Breakdowns, podcasts and more",
+          "customUrl": "@jomboymedia",
+          "publishedAt": "2006-12-28T20:29:28Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/d2JSr-1Ukp9fAjGCU8Z34dYXAKx-tANlplfesQwNK1YdHJzFgnPTBwpund2pbF1sLWHEKDE7wA=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/d2JSr-1Ukp9fAjGCU8Z34dYXAKx-tANlplfesQwNK1YdHJzFgnPTBwpund2pbF1sLWHEKDE7wA=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/d2JSr-1Ukp9fAjGCU8Z34dYXAKx-tANlplfesQwNK1YdHJzFgnPTBwpund2pbF1sLWHEKDE7wA=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "Jomboy Media",
+            "description": "Breakdowns, podcasts and more"
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "1602757656",
+          "subscriberCount": "2140000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "3484"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "bMpCeDMyZcQsEzvCkSI0V8lHWZs",
+        "id": "UCIJVitOI3F7UK1HtTBMwhGw",
+        "snippet": {
+          "title": "Swing and Miss",
+          "description": "Welcome to Swing and Miss! I'll be posting MLB players highlights and any other relevant videos!",
+          "customUrl": "@swingandmiss",
+          "publishedAt": "2024-03-30T08:43:51.463028Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/Tp1Tos-GkYFcxK5zAoNwN8yOLX-B_T5ShDlbCGhmrDHxwLVtJBSZO7h61QhS32iNUwmTtxsbBPc=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/Tp1Tos-GkYFcxK5zAoNwN8yOLX-B_T5ShDlbCGhmrDHxwLVtJBSZO7h61QhS32iNUwmTtxsbBPc=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/Tp1Tos-GkYFcxK5zAoNwN8yOLX-B_T5ShDlbCGhmrDHxwLVtJBSZO7h61QhS32iNUwmTtxsbBPc=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "Swing and Miss",
+            "description": "Welcome to Swing and Miss! I'll be posting MLB players highlights and any other relevant videos!"
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "32398406",
+          "subscriberCount": "17600",
+          "hiddenSubscriberCount": false,
+          "videoCount": "3500"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "4j-ThoeBlusA3kc7MkM_m9BiUz0",
+        "id": "UCPGrlUeF_WYg_SDNQhlo30A",
+        "snippet": {
+          "title": "All Dodgers with Clint Pasillas and Jeff Snider",
+          "description": "Honest insight and raw analysis of the Los Angeles Dodgers. The All Dodgers Podcast is hosted by Clint Pasillas (formerly the host of the Blue Heaven Podcast at Dodgers Nation) and Jeff Snider (formerly of Locked on Dodgers). Join Clint and Jeff, two baseball analysts and long-time credentialed sports writer as they keep up to date with the latest Dodgers news, trade rumors, instant reactions and more!\n\nShare your thoughts and opinions on the voicemail hotline! 📞 (562)373-4095\n\nSubscribe and join the conversation in the comments as we build the best YouTube community money can't buy!\nSupport the show on Patreon or YouTube Members to join us on the All Dodgers Discord!\n\nAll Dodgers, All the Time.\n\nSponsorships and collabs, email ➡️ clint@alldodgers.com",
+          "customUrl": "@alldodgers",
+          "publishedAt": "2007-02-14T00:44:16Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/CokSnoCEQiJPAVQvppspor6cyRXkcpjooYO-HRYVRCUoBjhgoC317ayYm65f0uvq2liaIL291g=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/CokSnoCEQiJPAVQvppspor6cyRXkcpjooYO-HRYVRCUoBjhgoC317ayYm65f0uvq2liaIL291g=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/CokSnoCEQiJPAVQvppspor6cyRXkcpjooYO-HRYVRCUoBjhgoC317ayYm65f0uvq2liaIL291g=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "All Dodgers with Clint Pasillas and Jeff Snider",
+            "description": "Honest insight and raw analysis of the Los Angeles Dodgers. The All Dodgers Podcast is hosted by Clint Pasillas (formerly the host of the Blue Heaven Podcast at Dodgers Nation) and Jeff Snider (formerly of Locked on Dodgers). Join Clint and Jeff, two baseball analysts and long-time credentialed sports writer as they keep up to date with the latest Dodgers news, trade rumors, instant reactions and more!\n\nShare your thoughts and opinions on the voicemail hotline! 📞 (562)373-4095\n\nSubscribe and join the conversation in the comments as we build the best YouTube community money can't buy!\nSupport the show on Patreon or YouTube Members to join us on the All Dodgers Discord!\n\nAll Dodgers, All the Time.\n\nSponsorships and collabs, email ➡️ clint@alldodgers.com"
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "2817221",
+          "subscriberCount": "16600",
+          "hiddenSubscriberCount": false,
+          "videoCount": "348"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "ef8WyNEQccDIejvNjgZwRDERUT0",
+        "id": "UCqz1AGVeB_zU7r_GWPRPs6w",
+        "snippet": {
+          "title": "iTalk Studios",
+          "description": "Baseball is cool, so I talk about it. Only subscribe if you're breathing. \n\nDedicated to Frankie.",
+          "customUrl": "@italkstudios",
+          "publishedAt": "2018-01-10T15:12:54Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/TnXH3PaUt7pQxyX176pVVVRPdqlh0Nm2-62DAdDvqcy7esZU6ozKFCmwRk24jnDJXeryEPX-=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/TnXH3PaUt7pQxyX176pVVVRPdqlh0Nm2-62DAdDvqcy7esZU6ozKFCmwRk24jnDJXeryEPX-=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/TnXH3PaUt7pQxyX176pVVVRPdqlh0Nm2-62DAdDvqcy7esZU6ozKFCmwRk24jnDJXeryEPX-=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "iTalk Studios",
+            "description": "Baseball is cool, so I talk about it. Only subscribe if you're breathing. \n\nDedicated to Frankie."
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "74970570",
+          "subscriberCount": "183000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "963"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "-fCJHo5VMe06F3POfxgAOLh8DDI",
+        "id": "UCf1MU0kWiniaaSIMX4hoT3A",
+        "snippet": {
+          "title": "The Sports Stop",
+          "description": "From game highlights to player spotlights, contract breakdowns, and all things baseball, we're your ultimate destination for everything MLB. ",
+          "customUrl": "@thesportsstop",
+          "publishedAt": "2023-12-31T07:59:29.418884Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/-PEtFThfUilCvoOLPjz676NCWKnqDb3nYoiSyO7Ypuo8wyLYSG1avXexQr7Y_9WeyPynlJvA=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/-PEtFThfUilCvoOLPjz676NCWKnqDb3nYoiSyO7Ypuo8wyLYSG1avXexQr7Y_9WeyPynlJvA=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/-PEtFThfUilCvoOLPjz676NCWKnqDb3nYoiSyO7Ypuo8wyLYSG1avXexQr7Y_9WeyPynlJvA=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "The Sports Stop",
+            "description": "From game highlights to player spotlights, contract breakdowns, and all things baseball, we're your ultimate destination for everything MLB. "
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "2361170",
+          "subscriberCount": "1740",
+          "hiddenSubscriberCount": false,
+          "videoCount": "114"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "ZDAH2SWqvXVOx0U3YT0MG6P5XAk",
+        "id": "UCCPljZ6A_7jD0TC9xs_S39w",
+        "snippet": {
+          "title": "Dodger Nate",
+          "description": "TikTok & Instagram- dodgernate\n125k followers on TikTok ",
+          "customUrl": "@dodgernateyt",
+          "publishedAt": "2013-08-16T22:16:58Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/s4tBYuHK2D4PLT09MKbEyq-Et9cbQHjnZBFxi0g_FNgH_CROtsMhzpMItJfqABKl4M_54vqNvZw=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/s4tBYuHK2D4PLT09MKbEyq-Et9cbQHjnZBFxi0g_FNgH_CROtsMhzpMItJfqABKl4M_54vqNvZw=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/s4tBYuHK2D4PLT09MKbEyq-Et9cbQHjnZBFxi0g_FNgH_CROtsMhzpMItJfqABKl4M_54vqNvZw=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "Dodger Nate",
+            "description": "TikTok & Instagram- dodgernate\n125k followers on TikTok "
+          }
+        },
+        "statistics": {
+          "viewCount": "21068171",
+          "subscriberCount": "13500",
+          "hiddenSubscriberCount": false,
+          "videoCount": "191"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "5qKqDnDM4bIzbbZ2aPOHoVu_-tc",
+        "id": "UCpPy2Kh1xW3PRH37R3LFQtw",
+        "snippet": {
+          "title": "Jesse Shredder",
+          "description": "Welcome to my channel! I am ⓋEGAN since 5/1/14 and I have been meat-free since 2002. I am passionate about living a vegan lifestyle, nutrition, fitness, bodybuilding, food art, sunglasses, wrestling and I would consider myself a collector.\n\nAdd me on all social media:\n@jesseshredder \n@pop.vegan\n\nSunwarrior Affiliate Influencer/Ambassador\nGet 15% OFF / USE THIS LINK: https://sunwarrior.com/pages/ambassador-storefront?lc_ambassador_id=Y3VzdG9tZXI6NTMwNDUwMw\nUSE CODE: JESSE\n\nCheck out my website to see my collaborations: www.jesseshredder.com\n\n#sports #dodgers #celtics #buffalobills #vegan #veganathlete #plantbasednutrition #veganfoodreviews #veganvlogger #sunglasses  #wrestling #plantbasednutrition #plantbased #veganfoodie #veganfood #veganchef #foodart #veganbodybuilding #supplements ",
+          "customUrl": "@jesseshredder",
+          "publishedAt": "2012-06-04T00:04:49Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/MmvIl3JNVv78wM_pvWtiNidoJYV56JaeeH61FMuptaq4NSFttb8v-hGhg1ZG7L59X52IKlEn=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/MmvIl3JNVv78wM_pvWtiNidoJYV56JaeeH61FMuptaq4NSFttb8v-hGhg1ZG7L59X52IKlEn=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/MmvIl3JNVv78wM_pvWtiNidoJYV56JaeeH61FMuptaq4NSFttb8v-hGhg1ZG7L59X52IKlEn=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "Jesse Shredder",
+            "description": "Welcome to my channel! I am ⓋEGAN since 5/1/14 and I have been meat-free since 2002. I am passionate about living a vegan lifestyle, nutrition, fitness, bodybuilding, food art, sunglasses, wrestling and I would consider myself a collector.\n\nAdd me on all social media:\n@jesseshredder \n@pop.vegan\n\nSunwarrior Affiliate Influencer/Ambassador\nGet 15% OFF / USE THIS LINK: https://sunwarrior.com/pages/ambassador-storefront?lc_ambassador_id=Y3VzdG9tZXI6NTMwNDUwMw\nUSE CODE: JESSE\n\nCheck out my website to see my collaborations: www.jesseshredder.com\n\n#sports #dodgers #celtics #buffalobills #vegan #veganathlete #plantbasednutrition #veganfoodreviews #veganvlogger #sunglasses  #wrestling #plantbasednutrition #plantbased #veganfoodie #veganfood #veganchef #foodart #veganbodybuilding #supplements "
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "9207129",
+          "subscriberCount": "9110",
+          "hiddenSubscriberCount": false,
+          "videoCount": "917"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "BVzxX9Y3322FlsKwJ8TMnTJj3Ok",
+        "id": "UC_uEKs0oDGHNc1wyt_GUSyQ",
+        "snippet": {
+          "title": "TST Dodgers",
+          "description": "The home of The Sporting Tribune's Dodgers coverage.",
+          "customUrl": "@tstdodgers",
+          "publishedAt": "2025-03-14T05:37:20.021973Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/PIduSVmTvR3kYpki8B5iChAjVzkj_xgzKLB50mgvm8Z_py8MvNp7RFKwWFdgHQKNoBKywBWz=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/PIduSVmTvR3kYpki8B5iChAjVzkj_xgzKLB50mgvm8Z_py8MvNp7RFKwWFdgHQKNoBKywBWz=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/PIduSVmTvR3kYpki8B5iChAjVzkj_xgzKLB50mgvm8Z_py8MvNp7RFKwWFdgHQKNoBKywBWz=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "TST Dodgers",
+            "description": "The home of The Sporting Tribune's Dodgers coverage."
+          }
+        },
+        "statistics": {
+          "viewCount": "3011615",
+          "subscriberCount": "2030",
+          "hiddenSubscriberCount": false,
+          "videoCount": "105"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "DILeKYTZM2DHlnxh2Vf9BCeK21g",
+        "id": "UCgy-74fZGA3dtZ-00tcuhMg",
+        "snippet": {
+          "title": "Út bào rong youtube ",
+          "description": "#mlb2025 #majorleaguebaseball #mlb #mlblive #mlbhighlights",
+          "customUrl": "@utbaorong",
+          "publishedAt": "2025-03-01T06:20:40.222371Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/-r8AykZgTDKtTGK3Wb-LVIuIiiZ8cBobgPZEY3vvOBkyVtxbVDo8LChJyyyQR-W6cPMG1tO8wGM=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/-r8AykZgTDKtTGK3Wb-LVIuIiiZ8cBobgPZEY3vvOBkyVtxbVDo8LChJyyyQR-W6cPMG1tO8wGM=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/-r8AykZgTDKtTGK3Wb-LVIuIiiZ8cBobgPZEY3vvOBkyVtxbVDo8LChJyyyQR-W6cPMG1tO8wGM=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "Út bào rong youtube ",
+            "description": "#mlb2025 #majorleaguebaseball #mlb #mlblive #mlbhighlights"
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "2122189",
+          "subscriberCount": "2980",
+          "hiddenSubscriberCount": false,
+          "videoCount": "906"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "TxZ1awf5ZVtTTfVFPPMH33EUVVc",
+        "id": "UCpFGokBcMMcOyAaW3mH5mPA",
+        "snippet": {
+          "title": "chiligaming 64",
+          "description": "Make someone happy even if it's just for a minute.",
+          "customUrl": "@chiligaming64",
+          "publishedAt": "2016-09-25T05:39:13Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/e-dZb-qaHmwMyJAeNXXlA-9388W-athyJH1J_RhmTvrAXrEtVAaeBbsNxaW9F7DbQLowGajlpw=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/e-dZb-qaHmwMyJAeNXXlA-9388W-athyJH1J_RhmTvrAXrEtVAaeBbsNxaW9F7DbQLowGajlpw=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/e-dZb-qaHmwMyJAeNXXlA-9388W-athyJH1J_RhmTvrAXrEtVAaeBbsNxaW9F7DbQLowGajlpw=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "chiligaming 64",
+            "description": "Make someone happy even if it's just for a minute."
+          }
+        },
+        "statistics": {
+          "viewCount": "12476984",
+          "subscriberCount": "20200",
+          "hiddenSubscriberCount": false,
+          "videoCount": "1407"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "m0HsRJZh-QTXoYSxdyJeQD60mUw",
+        "id": "UCpIh0P7QXG8KF6S7tEvKTHA",
+        "snippet": {
+          "title": "Sports Factory",
+          "description": "Welcome to Sports Factory! Experience realistic MLB, NFL, and college football simulations that feel like live matches! Our gameplay videos predict scores and outcomes for Super Bowl, MLB playoffs, World Series, college football playoff, and more. Dive into lifelike NFL games, MLB virtual showdowns, and dynamic college football action! We bring premier sports simulations, realistic sports showdowns, and immersive gameplay to mimic real matches. Love Super Bowl simulations, MLB live simulations, or college football live predictions? Enjoy NFL playoff simulations, virtual baseball scores, thrilling NFL predictions, and MLB prediction battles too! Subscribe and hit the bell for epic sports simulations, virtual NFL action, live baseball gameplay, exciting score predictions, and college football virtual games! Stay for the excitement, enjoy the strategy, explore realistic match previews, and join us for the ultimate sports simulation experience! Thanks!",
+          "customUrl": "@_sportsfactory",
+          "publishedAt": "2019-08-19T12:40:14Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/LxavY4oQNc0dl3-Ey6g97UWvQx2I7hpneAaldB-WvU79gMt6-LRBw6Lt9oSr_godbLLh0GwO=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/LxavY4oQNc0dl3-Ey6g97UWvQx2I7hpneAaldB-WvU79gMt6-LRBw6Lt9oSr_godbLLh0GwO=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/LxavY4oQNc0dl3-Ey6g97UWvQx2I7hpneAaldB-WvU79gMt6-LRBw6Lt9oSr_godbLLh0GwO=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "Sports Factory",
+            "description": "Welcome to Sports Factory! Experience realistic MLB, NFL, and college football simulations that feel like live matches! Our gameplay videos predict scores and outcomes for Super Bowl, MLB playoffs, World Series, college football playoff, and more. Dive into lifelike NFL games, MLB virtual showdowns, and dynamic college football action! We bring premier sports simulations, realistic sports showdowns, and immersive gameplay to mimic real matches. Love Super Bowl simulations, MLB live simulations, or college football live predictions? Enjoy NFL playoff simulations, virtual baseball scores, thrilling NFL predictions, and MLB prediction battles too! Subscribe and hit the bell for epic sports simulations, virtual NFL action, live baseball gameplay, exciting score predictions, and college football virtual games! Stay for the excitement, enjoy the strategy, explore realistic match previews, and join us for the ultimate sports simulation experience! Thanks!"
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "12649133",
+          "subscriberCount": "36600",
+          "hiddenSubscriberCount": false,
+          "videoCount": "17536"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "QhTp7K4yEB83Atero0iKJE1jy_Q",
+        "id": "UCaIPm2FqHw4OzRQi82YXV2Q",
+        "snippet": {
+          "title": "EmpireJeffTV",
+          "description": "Home of EmpireJeffTV \n\n\n\n",
+          "customUrl": "@empirejefftv",
+          "publishedAt": "2012-02-13T04:48:44Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/n_ae0hQfN7vlPrVWL9anlwDER32rTP-LUQN5yY4LGlY0o5unSUfmE2qG96vsI33fZqyKe1iYCHo=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/n_ae0hQfN7vlPrVWL9anlwDER32rTP-LUQN5yY4LGlY0o5unSUfmE2qG96vsI33fZqyKe1iYCHo=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/n_ae0hQfN7vlPrVWL9anlwDER32rTP-LUQN5yY4LGlY0o5unSUfmE2qG96vsI33fZqyKe1iYCHo=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "EmpireJeffTV",
+            "description": "Home of EmpireJeffTV \n\n\n\n"
+          },
+          "country": "US"
+        },
+        "statistics": {
+          "viewCount": "491826",
+          "subscriberCount": "2140",
+          "hiddenSubscriberCount": false,
+          "videoCount": "859"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "ZJyVZi6MP_m5OTs3ObX5X7y_wV0",
+        "id": "UCoLrcjPV5PbUrUyXq5mjc_A",
+        "snippet": {
+          "title": "MLB",
+          "description": "",
+          "customUrl": "@mlb",
+          "publishedAt": "2005-12-25T18:02:22Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/oxG5vPLXAS37cggRvlO5j5M0ZCHRwMrxvs8U5Xlx3naNuL76uJvmH915i0ofBDtxsBfWhE7-aw=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/oxG5vPLXAS37cggRvlO5j5M0ZCHRwMrxvs8U5Xlx3naNuL76uJvmH915i0ofBDtxsBfWhE7-aw=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/oxG5vPLXAS37cggRvlO5j5M0ZCHRwMrxvs8U5Xlx3naNuL76uJvmH915i0ofBDtxsBfWhE7-aw=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "MLB",
+            "description": ""
+          }
+        },
+        "statistics": {
+          "viewCount": "6583878022",
+          "subscriberCount": "6460000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "301225"
+        }
+      },
+      {
+        "kind": "youtube#channel",
+        "etag": "z-1s_Xwj5VZzzHCTqa-apxgbXXM",
+        "id": "UC05cNJvMKzDLRPo59X2Xx7g",
+        "snippet": {
+          "title": "Los Angeles Dodgers",
+          "description": "Official YouTube account for the Los Angeles Dodgers.\nwww.dodgers.com\n\nwww.dodgerinsider.com\n\n \n\nFacebook.com/Dodgers\n\nInstagram.com/Dodgers\n\nTwitter.com/Dodgers\n\nTwitter.com/DodgerInsider\n\nSnapchat.com/Dodgers",
+          "customUrl": "@dodgers",
+          "publishedAt": "2015-08-18T18:52:17Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kxDKyOCPHoyrnt48eKVi92zb2LQXAjmYDeX-_Nf2gd1Vv5=s88-c-k-c0x00ffffff-no-rj",
+              "width": 88,
+              "height": 88
+            },
+            "medium": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kxDKyOCPHoyrnt48eKVi92zb2LQXAjmYDeX-_Nf2gd1Vv5=s240-c-k-c0x00ffffff-no-rj",
+              "width": 240,
+              "height": 240
+            },
+            "high": {
+              "url": "https://yt3.ggpht.com/ytc/AIdro_kxDKyOCPHoyrnt48eKVi92zb2LQXAjmYDeX-_Nf2gd1Vv5=s800-c-k-c0x00ffffff-no-rj",
+              "width": 800,
+              "height": 800
+            }
+          },
+          "localized": {
+            "title": "Los Angeles Dodgers",
+            "description": "Official YouTube account for the Los Angeles Dodgers.\nwww.dodgers.com\n\nwww.dodgerinsider.com\n\n \n\nFacebook.com/Dodgers\n\nInstagram.com/Dodgers\n\nTwitter.com/Dodgers\n\nTwitter.com/DodgerInsider\n\nSnapchat.com/Dodgers"
+          }
+        },
+        "statistics": {
+          "viewCount": "120122160",
+          "subscriberCount": "444000",
+          "hiddenSubscriberCount": false,
+          "videoCount": "1145"
+        }
+      }
     ]
-}
+  }
+

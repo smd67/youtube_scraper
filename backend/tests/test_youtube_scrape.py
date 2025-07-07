@@ -94,7 +94,7 @@ def test_transform_channel_data():
     Test the transform_channel_data method.
     """
     columns = [
-        "Channel Id",
+        "Channel_Id",
         "Title",
         "Url",
         "Description",
@@ -107,7 +107,7 @@ def test_transform_channel_data():
         channel_data = json.load(json_file)
     df = transform_channel_data("dodgers", channel_data)
     assert df.columns.to_list() == columns
-    assert len(df) == 15
+    assert len(df) == 30
     assert all(
         [
             similarity >= 0.0 and similarity <= 100.0
@@ -127,7 +127,7 @@ def test_transform_comment_thread_data():
     Test the transform_comment_thread_data method.
     """
     columns = [
-        "Channel Id",
+        "Channel_Id",
         "Score",
     ]
     with open("backend/tests/comment_thread_results.json", "r") as json_file:
@@ -146,19 +146,19 @@ def test_transform_data():
     Test the transform_data method.
     """
     columns = [
-        "Channel Id",
+        "Channel_Id",
         "Title",
         "Url",
         "Description",
-        "" "Videos",
+        "Videos",
         "Subscribers",
         "Similarity",
         "Score",
-        "Videos Rank",
-        "Subscribers Rank",
-        "Score Rank",
-        "Similarity Rank",
-        "Average Rank",
+        "Videos_Rank",
+        "Subscribers_Rank",
+        "Score_Rank",
+        "Similarity_Rank",
+        "Average_Rank",
     ]
     with open("backend/tests/comment_thread_results.json", "r") as json_file:
         comment_threads_data = json.load(json_file)
@@ -181,18 +181,18 @@ def test_transform_data():
     )
 
     assert all(
-        [rank > 0 and rank <= len(df) for rank in df["Videos Rank"].to_list()]
+        [rank > 0 and rank <= len(df) for rank in df["Videos_Rank"].to_list()]
     )
 
     assert all(
         [
             rank > 0 and rank <= len(df)
-            for rank in df["Subscribers Rank"].to_list()
+            for rank in df["Subscribers_Rank"].to_list()
         ]
     )
 
     assert all(
-        [rank > 0 and rank <= len(df) for rank in df["Score Rank"].to_list()]
+        [rank > 0 and rank <= len(df) for rank in df["Score_Rank"].to_list()]
     )
 
     assert df.columns.to_list() == columns
@@ -395,7 +395,7 @@ def test_main(
         Mock for search data download
     """
     columns = [
-        "Channel Id",
+        "Channel_Id",
         "Title",
         "Url",
         "Description",
@@ -403,11 +403,11 @@ def test_main(
         "Subscribers",
         "Similarity",
         "Score",
-        "Videos Rank",
-        "Subscribers Rank",
-        "Score Rank",
-        "Similarity Rank",
-        "Average Rank",
+        "Videos_Rank",
+        "Subscribers_Rank",
+        "Score_Rank",
+        "Similarity_Rank",
+        "Average_Rank",
     ]
     with open("backend/tests/search_results.json", "r") as json_file:
         search_data = json.load(json_file)
@@ -436,18 +436,18 @@ def test_main(
     )
 
     assert all(
-        [rank > 0 and rank <= len(df) for rank in df["Videos Rank"].to_list()]
+        [rank > 0 and rank <= len(df) for rank in df["Videos_Rank"].to_list()]
     )
 
     assert all(
         [
             rank > 0 and rank <= len(df)
-            for rank in df["Subscribers Rank"].to_list()
+            for rank in df["Subscribers_Rank"].to_list()
         ]
     )
 
     assert all(
-        [rank > 0 and rank <= len(df) for rank in df["Score Rank"].to_list()]
+        [rank > 0 and rank <= len(df) for rank in df["Score_Rank"].to_list()]
     )
 
     assert df.columns.to_list() == columns
