@@ -13,7 +13,6 @@ The output from the endpoint will be ranked by those criteria.
 
 import argparse
 import os
-import json
 import random
 import re
 from typing import Any
@@ -85,10 +84,10 @@ def do_query(query: Query) -> list[Row]:
     Returns
     -------
     list[Row]
-        A list of JSON objects that includes information about interesting channels you
-        might want to subscribe to.
+        A list of JSON objects that includes information about interesting
+        channels you might want to subscribe to.
     """
-    
+
     MAX_RESULTS = 20
     df = main(query.query_string).head(MAX_RESULTS)
     json_data = df.to_dict(orient="records")  # 'records' is a common format
@@ -96,7 +95,6 @@ def do_query(query: Query) -> list[Row]:
     print(json_data)
     print("=================")
     return [Row(**row_dict) for row_dict in json_data]
-
 
 
 def extract_search_data(
@@ -330,9 +328,7 @@ def transform_channel_data(query: str, channel_data: dict) -> pd.DataFrame:
         title = channel_item.get("snippet", {}).get("title", "")
         description = channel_item.get("snippet", {}).get("description", "")
         sim_score = fuzzy_similarity(query, description)
-        video_count = channel_item.get("statistics", {}).get(
-            "videoCount", ""
-        )
+        video_count = channel_item.get("statistics", {}).get("videoCount", "")
         subscriber_count = channel_item.get("statistics", {}).get(
             "subscriberCount", ""
         )
