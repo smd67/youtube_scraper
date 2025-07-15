@@ -225,7 +225,7 @@ def extract_comment_thread_data(
 
     data: Dict[str, List[Any]] = {}
     data["items"] = []
-    videos: dict[str, List[Any]] = {}
+    videos: Dict[str, List[Any]] = {}
     n = 2
 
     # Create dictionary
