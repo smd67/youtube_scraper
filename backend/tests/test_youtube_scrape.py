@@ -16,7 +16,7 @@ from backend.src.youtube_scrape import (
     perform_sentiment_analysis,
     transform_channel_data,
     transform_comment_thread_data,
-    transform_data
+    transform_data,
 )
 
 
@@ -88,6 +88,7 @@ def test_perform_sentiment_analysis():
     result = perform_sentiment_analysis(str1)
     assert result == 0.226
 
+
 @patch("bonobo.config.use")
 def test_transform_channel_data(use_mock: MagicMock):
     """
@@ -123,6 +124,7 @@ def test_transform_channel_data(use_mock: MagicMock):
         ]
     )
 
+
 @patch("bonobo.config.use")
 def test_transform_comment_thread_data(use_mock: MagicMock):
     """
@@ -132,7 +134,7 @@ def test_transform_comment_thread_data(use_mock: MagicMock):
         "Channel_Id",
         "Score",
     ]
-    use_mock.return_value = None 
+    use_mock.return_value = None
     with open("backend/tests/comment_thread_results.json", "r") as json_file:
         comment_threads_data = json.load(json_file)
     key, df = next(transform_comment_thread_data(comment_threads_data))
@@ -142,6 +144,7 @@ def test_transform_comment_thread_data(use_mock: MagicMock):
     assert all(
         [score >= 0.0 and score <= 1.0 for score in df["Score"].to_list()]
     )
+
 
 @patch("bonobo.config.use")
 def test_transform_data(use_mock: MagicMock):
@@ -171,12 +174,14 @@ def test_transform_data(use_mock: MagicMock):
     with open("backend/tests/channel_results.json", "r") as json_file:
         channel_data = json.load(json_file)
 
-    _, comment_thread_df = next(transform_comment_thread_data(comment_thread_data))
+    _, comment_thread_df = next(
+        transform_comment_thread_data(comment_thread_data)
+    )
     _, channel_data_df = next(transform_channel_data(channel_data, "dodgers"))
 
     kv_store_mock = {
         "channel_data": channel_data_df,
-        "comment_thread_data": comment_thread_df
+        "comment_thread_data": comment_thread_df,
     }
     with patch("backend.src.youtube_scrape.KV_STORE", kv_store_mock):
         df = transform_data()
@@ -209,6 +214,7 @@ def test_transform_data(use_mock: MagicMock):
     )
 
     assert df.columns.to_list() == columns
+
 
 @patch("googleapiclient.discovery.build")
 def test_extract_comment_thread_data(mock_googleapi: MagicMock):
@@ -247,13 +253,13 @@ def test_extract_comment_thread_data(mock_googleapi: MagicMock):
         for item in list_item.get("items", []):
             video_id = item.get("id", {}).get("videoId")
             search_data_l.append(video_id)
-   
-    
+
     for list_item in comment_thread_data.get("items", []):
         for video_id in [
             item["videoId"] for item in list_item.get("items", [])
         ]:
             assert video_id in search_data_l
+
 
 @patch("googleapiclient.discovery.build")
 def test_extract_channel_data(mock_googleapi: MagicMock):
@@ -291,7 +297,7 @@ def test_extract_channel_data(mock_googleapi: MagicMock):
             video_id = item.get("id", {}).get("videoId")
             channel_id = item.get("snippet", {}).get("channelId")
             search_data_results.append((video_id, channel_id))
-    
+
     result = next(extract_channel_data(search_data_results))
     assert channels.list.call_count == 2
     assert "items" in result
@@ -308,6 +314,7 @@ def test_extract_channel_data(mock_googleapi: MagicMock):
 
     for list_item in result.get("items", []):
         list_item.get("id") in search_data_l
+
 
 @patch("googleapiclient.discovery.build")
 def test_extract_channel_data_with_page_token(mock_googleapi: MagicMock):
@@ -370,9 +377,12 @@ def test_extract_channel_data_with_page_token(mock_googleapi: MagicMock):
     for list_item in result.get("items", []):
         list_item.get("id") in search_data_l
 
+
 @patch("googleapiclient.discovery.build")
 @patch("bonobo.config.use")
-def test_extract_search_data_with_page_token(mock_use: MagicMock, mock_googleapi: MagicMock):
+def test_extract_search_data_with_page_token(
+    mock_use: MagicMock, mock_googleapi: MagicMock
+):
     """
     Tests the extract_channel_data method with paging.
     """
@@ -382,7 +392,7 @@ def test_extract_search_data_with_page_token(mock_use: MagicMock, mock_googleapi
         q: Optional[str] = None,
         pageToken: Optional[str] = None,
         maxResults: int = 5,
-        safeSearch: Optional[str] = None
+        safeSearch: Optional[str] = None,
     ):
         _ = q
         assert part == "snippet"
@@ -470,12 +480,14 @@ def test_main(
     mock_googleapiclient.return_value = MagicMock()
     mock_run.return_value = None
     mock_graph.add_chain.return_value = None
-    _, comment_thread_df = next(transform_comment_thread_data(comment_thread_data))
+    _, comment_thread_df = next(
+        transform_comment_thread_data(comment_thread_data)
+    )
     _, channel_data_df = next(transform_channel_data(channel_data, "dodgers"))
 
     kv_store_mock = {
         "channel_data": channel_data_df,
-        "comment_thread_data": comment_thread_df
+        "comment_thread_data": comment_thread_df,
     }
     with patch("backend.src.youtube_scrape.KV_STORE", kv_store_mock):
         df = main("dodgers")
@@ -492,7 +504,10 @@ def test_main(
         )
 
         assert all(
-            [rank > 0 and rank <= len(df) for rank in df["Videos_Rank"].to_list()]
+            [
+                rank > 0 and rank <= len(df)
+                for rank in df["Videos_Rank"].to_list()
+            ]
         )
 
         assert all(
@@ -503,7 +518,10 @@ def test_main(
         )
 
         assert all(
-            [rank > 0 and rank <= len(df) for rank in df["Score_Rank"].to_list()]
+            [
+                rank > 0 and rank <= len(df)
+                for rank in df["Score_Rank"].to_list()
+            ]
         )
 
         assert df.columns.to_list() == columns
