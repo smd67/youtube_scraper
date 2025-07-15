@@ -15,7 +15,7 @@ import argparse
 import os
 import random
 import re
-from typing import Any, Generator
+from typing import Any, Dict, Generator, List, Tuple
 
 import bonobo
 import googleapiclient.discovery
@@ -31,7 +31,7 @@ from pydantic import BaseModel
 # from tabulate import tabulate
 
 # Global data
-KV_STORE: dict[str, pd.DataFrame] = (
+KV_STORE: Dict[str, pd.DataFrame] = (
     {}
 )  # Key-Value storage for the transform results
 
@@ -112,7 +112,7 @@ app.add_middleware(
 
 
 @app.post("/query/")
-def do_query(query: Query) -> list[Row]:
+def do_query(query: Query) -> List[Row]:
     """
     This is the main api entry point that the frontend communicates through.
 
@@ -141,7 +141,7 @@ def do_query(query: Query) -> list[Row]:
 @use("query")
 def extract_search_data(
     query: str,
-) -> Generator[list[tuple[str, str]], None, None]:
+) -> Generator[List[Tuple[str, str]], None, None]:
     """
     Search for videos that match a query string.
 
@@ -200,8 +200,8 @@ def extract_search_data(
 
 
 def extract_comment_thread_data(
-    search_data: list[tuple[str, str]]
-) -> Generator[dict[str, list[Any]], None, None]:
+    search_data: List[Tuple[str, str]]
+) -> Generator[Dict[str, List[Any]], None, None]:
     """
     Extract comments for all of the videos.
 
@@ -252,8 +252,8 @@ def extract_comment_thread_data(
 
 
 def extract_channel_data(
-    search_data: list[tuple[str, str]]
-) -> Generator[dict[str, list[Any]], None, None]:
+    search_data: List[Tuple[str, str]]
+) -> Generator[Dict[str, List[Any]], None, None]:
     """
     Extract channel data for all of the videos.
 
@@ -341,8 +341,8 @@ def perform_sentiment_analysis(text: str) -> float:
 
 
 def transform_comment_thread_data(
-    comment_thread_data: dict,
-) -> Generator[tuple[str, pd.DataFrame], None, None]:
+    comment_thread_data: Dict,
+) -> Generator[Tuple[str, pd.DataFrame], None, None]:
     """
     Transform the comment_thread_data into a useable dataframe.
     Parameters
@@ -385,7 +385,7 @@ def transform_comment_thread_data(
 @use("query")
 def transform_channel_data(
     channel_data: dict, query: str
-) -> Generator[tuple[str, pd.DataFrame], None, None]:
+) -> Generator[Tuple[str, pd.DataFrame], None, None]:
     """
     Transform the channel_data into a useable dataframe.
 
