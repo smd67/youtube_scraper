@@ -165,7 +165,7 @@ def extract_search_data(
         api_service_name, api_version, developerKey=api_key
     )
 
-    response_list: list[Any] = []
+    response_list: List[Any] = []
     params = {
         "part": "snippet",
         "q": query,
@@ -223,9 +223,9 @@ def extract_comment_thread_data(
         api_service_name, api_version, developerKey=api_key
     )
 
-    data: dict[str, list[Any]] = {}
+    data: Dict[str, List[Any]] = {}
     data["items"] = []
-    videos: dict[str, list[Any]] = {}
+    videos: dict[str, List[Any]] = {}
     n = 2
 
     # Create dictionary
@@ -529,7 +529,7 @@ def fuzzy_similarity(str1: str, str2: str) -> float:
     return best_ratio
 
 
-def get_services(query: str) -> dict[str, Any]:
+def get_services(query: str) -> Dict[str, Any]:
     """
     Method used to pass global data and services into graph.
 
