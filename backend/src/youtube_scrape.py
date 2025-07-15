@@ -15,6 +15,7 @@ import argparse
 import os
 import random
 import re
+from enum import Enum
 from typing import Any, Dict, Generator, List, Tuple
 
 import bonobo
@@ -30,8 +31,18 @@ from pydantic import BaseModel
 
 # from tabulate import tabulate
 
+
+class ChainType(Enum):
+    """
+    Enumeration of graph chain types.
+    """
+
+    CHANNEL_DATA = (1,)
+    COMMENT_THREAD_DATA = 2
+
+
 # Global data
-KV_STORE: Dict[str, pd.DataFrame] = (
+KV_STORE: Dict[ChainType, pd.DataFrame] = (
     {}
 )  # Key-Value storage for the transform results
 
@@ -342,7 +353,7 @@ def perform_sentiment_analysis(text: str) -> float:
 
 def transform_comment_thread_data(
     comment_thread_data: Dict,
-) -> Generator[Tuple[str, pd.DataFrame], None, None]:
+) -> Generator[Tuple[ChainType, pd.DataFrame], None, None]:
     """
     Transform the comment_thread_data into a useable dataframe.
     Parameters
@@ -354,7 +365,7 @@ def transform_comment_thread_data(
 
     Yields
     ------
-    Generator[tuple[str, pd.DataFrame], None, None]
+    Generator[tuple[ChainType, pd.DataFrame], None, None]
         A tuple pair (key, df) that contains the type of data and a
         useable dataframe.
     """
@@ -379,13 +390,13 @@ def transform_comment_thread_data(
     df = pd.DataFrame(data, columns=["Channel_Id", "Score"])
     grouped_data = df.groupby("Channel_Id")["Score"].mean()
     result_df = grouped_data.reset_index()
-    yield ("comment_thread_data", result_df)
+    yield (ChainType.COMMENT_THREAD_DATA, result_df)
 
 
 @use("query")
 def transform_channel_data(
     channel_data: dict, query: str
-) -> Generator[Tuple[str, pd.DataFrame], None, None]:
+) -> Generator[Tuple[ChainType, pd.DataFrame], None, None]:
     """
     Transform the channel_data into a useable dataframe.
 
@@ -439,7 +450,7 @@ def transform_channel_data(
             "Similarity",
         ],
     )
-    yield ("channel_data", df)
+    yield (ChainType.CHANNEL_DATA, df)
 
 
 def transform_data() -> pd.DataFrame:
@@ -463,9 +474,8 @@ def transform_data() -> pd.DataFrame:
         A combined dataframe with elements from the channel and comment threads.
     """
 
-    comment_thread_df = KV_STORE["comment_thread_data"]
-
-    channel_df = KV_STORE["channel_data"]
+    comment_thread_df = KV_STORE[ChainType.COMMENT_THREAD_DATA]
+    channel_df = KV_STORE[ChainType.CHANNEL_DATA]
 
     combined_df = pd.merge(channel_df, comment_thread_df, on="Channel_Id")
     combined_df["Videos_Rank"] = combined_df["Videos"].rank(
@@ -546,7 +556,7 @@ def get_services(query: str) -> Dict[str, Any]:
     return {"query": query}
 
 
-def store_results(key: str, df: pd.DataFrame):
+def store_results(key: ChainType, df: pd.DataFrame):
     """
     Store transform results for final processing.
 
@@ -557,7 +567,6 @@ def store_results(key: str, df: pd.DataFrame):
     df : pd.DataFrame
         The dataframe output by the transform function.
     """
-    global KV_STORE
     KV_STORE[key] = df
 
 

@@ -8,6 +8,7 @@ from typing import Optional
 from unittest.mock import MagicMock, patch
 
 from backend.src.youtube_scrape import (
+    ChainType,
     extract_channel_data,
     extract_comment_thread_data,
     extract_search_data,
@@ -108,7 +109,7 @@ def test_transform_channel_data(use_mock: MagicMock):
     with open("backend/tests/channel_results.json", "r") as json_file:
         channel_data = json.load(json_file)
     key, df = next(transform_channel_data(channel_data, "dodgers"))
-    assert key == "channel_data"
+    assert key == ChainType.CHANNEL_DATA
     assert df.columns.to_list() == columns
     assert len(df) == 30
     assert all(
@@ -138,7 +139,7 @@ def test_transform_comment_thread_data(use_mock: MagicMock):
     with open("backend/tests/comment_thread_results.json", "r") as json_file:
         comment_threads_data = json.load(json_file)
     key, df = next(transform_comment_thread_data(comment_threads_data))
-    assert key == "comment_thread_data"
+    assert key == ChainType.COMMENT_THREAD_DATA
     assert df.columns.to_list() == columns
     assert len(df) == 3
     assert all(
@@ -180,8 +181,8 @@ def test_transform_data(use_mock: MagicMock):
     _, channel_data_df = next(transform_channel_data(channel_data, "dodgers"))
 
     kv_store_mock = {
-        "channel_data": channel_data_df,
-        "comment_thread_data": comment_thread_df,
+        ChainType.CHANNEL_DATA: channel_data_df,
+        ChainType.COMMENT_THREAD_DATA: comment_thread_df,
     }
     with patch("backend.src.youtube_scrape.KV_STORE", kv_store_mock):
         df = transform_data()
@@ -486,8 +487,8 @@ def test_main(
     _, channel_data_df = next(transform_channel_data(channel_data, "dodgers"))
 
     kv_store_mock = {
-        "channel_data": channel_data_df,
-        "comment_thread_data": comment_thread_df,
+        ChainType.CHANNEL_DATA: channel_data_df,
+        ChainType.COMMENT_THREAD_DATA: comment_thread_df,
     }
     with patch("backend.src.youtube_scrape.KV_STORE", kv_store_mock):
         df = main("dodgers")
