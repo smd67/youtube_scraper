@@ -61,3 +61,4 @@ pandas-stubs
 pytest==8.4.1
 pytest-cov==6.2.1
 pdoc==15.0.4
+bonobo==0.6.4

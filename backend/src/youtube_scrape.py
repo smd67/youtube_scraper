@@ -15,17 +15,25 @@ import argparse
 import os
 import random
 import re
-from typing import Any
+from typing import Any, Generator
 
+import bonobo
 import googleapiclient.discovery
 import pandas as pd
-from download import download
+from bonobo.config import use
+from download import download  # pylint: disable=import-error
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fuzzywuzzy import fuzz
 from nltk.sentiment import SentimentIntensityAnalyzer
 from pydantic import BaseModel
-from tabulate import tabulate
+
+# from tabulate import tabulate
+
+# Global data
+KV_STORE: dict[str, pd.DataFrame] = (
+    {}
+)  # Key-Value storage for the transform results
 
 
 class Query(BaseModel):
@@ -39,6 +47,40 @@ class Query(BaseModel):
 class Row(BaseModel):
     """
     A row of data returned by the backend.
+
+    Parameters
+    ----------
+    Channel_Id : str
+        The unique identifier for the recommended channel
+    Title : str
+        The title of the recommended channel
+    Url : str
+        The YouTube url for the recommended channel
+    Description : str
+        A description of the recommended channel
+    Videos : int
+        A count of videos that the recommended channel has
+    Subscribers : int
+        The number of subscribers that the ecommended channel has
+    Similarity : float
+        A value between 0 and 100 that indicates the similarity of the q
+        string to the channel description
+    Score : float
+        A value between 0 and 1 that represents the percentage of favorable
+        reviews for videos the channel hosts
+    Videos_Rank : int
+        The ranking position of the channel in regards to the number of videos
+    Subscribers_Rank : int
+        The ranking position of the channel in regards to the number of
+        subscribers
+    Score_Rank : int
+        The ranking position of the channel in regards to the number of
+        favorable comments
+    Similarity_Rank : int
+        The ranking position of the channel in regards to the similarity
+        of the query string and description
+    Average_Rank : float
+        The average ranking of the channel based on all factors
     """
 
     Channel_Id: str
@@ -97,29 +139,40 @@ def do_query(query: Query) -> list[Row]:
     return [Row(**row_dict) for row_dict in json_data]
 
 
+@use("query")
 def extract_search_data(
-    instance: googleapiclient.discovery.Resource, query: str
-) -> list[Any]:
+    query: str,
+) -> Generator[list[tuple[str, str]], None, None]:
     """
     Search for videos that match a query string.
 
     Parameters
     ----------
-    instance : googleapiclient.discovery.Resource
-        The YouTube instance to query.
     query : str
         The query string used in the "q" parameter.
 
-    Returns
-    -------
-    str
-        The json data from the response.
+    Yields
+    ------
+    Generator[list[tuple[str, str]], None, None]
+        A list of tuple pairs (video_id, channel_id)
     """
     MAX_RESULTS_PER_PAGE = 50
     MAX_PAGES = 5
 
+    api_service_name = "youtube"
+    api_version = "v3"
+    api_key = os.environ.get("DEVELOPER_KEY")
+    youtube = googleapiclient.discovery.build(
+        api_service_name, api_version, developerKey=api_key
+    )
+
     response_list: list[Any] = []
-    params = {"part": "snippet", "q": query, "maxResults": MAX_RESULTS_PER_PAGE}
+    params = {
+        "part": "snippet",
+        "q": query,
+        "maxResults": MAX_RESULTS_PER_PAGE,
+        "safeSearch": "none",
+    }
     while True:
         page_token = None
 
@@ -127,7 +180,7 @@ def extract_search_data(
             break
 
         try:
-            request = instance.search().list(**params)  # type: ignore
+            request = youtube.search().list(**params)  # type: ignore
             response = request.execute()
             response_list.append(response)
             page_token = response.get("nextPageToken")
@@ -138,28 +191,39 @@ def extract_search_data(
             params = {"part": "snippet", "q": query, "pageToken": page_token}
         else:
             break
-
-    return response_list
+    search_data = []
+    for response in response_list:
+        for item in response.get("items", []):
+            video_id = item.get("id", {}).get("videoId")
+            channel_id = item.get("snippet", {}).get("channelId")
+            search_data.append((video_id, channel_id))
+    yield search_data
 
 
 def extract_comment_thread_data(
-    instance: googleapiclient.discovery.Resource, search_data: list[Any]
-) -> dict[str, list[Any]]:
+    search_data: list[tuple[str, str]]
+) -> Generator[dict[str, list[Any]], None, None]:
     """
     Extract comments for all of the videos.
 
     Parameters
     ----------
-    instance : googleapiclient.discovery.Resource
-        YouTube instance to query
-    search_data : dict
-        Dictionary containing the search data.
+    search_data : list[tuple[str, str]]
+        A list of tuple pairs (video_id, channel_id)
 
-    Returns
-    -------
-    list
-        A list of comment threads.
+    Yields
+    ------
+    Generator[dict[str, list[Any]], None, None]
+        Returs a dictionary with an "items" key whose value is the JSON data
+        of all of the responses.
     """
+    api_service_name = "youtube"
+    api_version = "v3"
+    api_key = os.environ.get("DEVELOPER_KEY")
+    youtube = googleapiclient.discovery.build(
+        api_service_name, api_version, developerKey=api_key
+    )
+
     data: dict[str, list[Any]] = {}
     data["items"] = []
     videos: dict[str, list[Any]] = {}
@@ -167,53 +231,58 @@ def extract_comment_thread_data(
 
     # Create dictionary
     for list_item in search_data:
-        for item in list_item.get("items", []):
-            video_id = item.get("id", {}).get("videoId")
-            channel_id = item.get("snippet", {}).get("channelId")
-            if channel_id not in videos:
-                videos[channel_id] = []
-            videos[channel_id].append(video_id)
+        video_id = list_item[0]
+        channel_id = list_item[1]
+        if channel_id not in videos:
+            videos[channel_id] = []
+        videos[channel_id].append(video_id)
 
     for channel_id, video_list in videos.items():
         if len(video_list) > 2:
             video_list = random.sample(video_list, n)
         for video_id in video_list:
             try:
-                request = instance.commentThreads().list(  # type: ignore
+                request = youtube.commentThreads().list(  # type: ignore
                     part="id, replies, snippet", videoId=video_id
                 )
                 response = request.execute()
                 data["items"].append(response)
             except googleapiclient.errors.HttpError:
                 pass
-    return data
+    yield data
 
 
 def extract_channel_data(
-    instance: googleapiclient.discovery.Resource, search_data: list[Any]
-) -> dict:
+    search_data: list[tuple[str, str]]
+) -> Generator[dict[str, list[Any]], None, None]:
     """
     Extract channel data for all of the videos.
 
     Parameters
     ----------
-    instance : googleapiclient.discovery.Resource
-        YouTube instance to query
-    search_data : dict
-        Dictionary containing the search data.
+    search_data : list[tuple[str, str]]
+        A list of tuple pairs (video_id, channel_id)
 
-    Returns
-    -------
-    list
-        A list of comment threads.
+    Yields
+    ------
+    Generator[dict[str, list[Any]], None, None]
+        Returns a dictionary with an "items" key whose value is the JSON data
+        of all of the responses.
     """
+
+    api_service_name = "youtube"
+    api_version = "v3"
+    api_key = os.environ.get("DEVELOPER_KEY")
+    youtube = googleapiclient.discovery.build(
+        api_service_name, api_version, developerKey=api_key
+    )
+
     data: dict = {}
     data["items"] = []
     channel_ids = set()
     for list_item in search_data:
-        for item in list_item.get("items", []):
-            channel_id = item.get("snippet", {}).get("channelId")
-            channel_ids.add(channel_id)
+        channel_id = list_item[1]
+        channel_ids.add(channel_id)
 
     channel_id_list = list(channel_ids)
     chunk_size = 10
@@ -231,7 +300,7 @@ def extract_channel_data(
         while True:
             page_token = None
             try:
-                request = instance.channels().list(**params)  # type: ignore
+                request = youtube.channels().list(**params)  # type: ignore
                 response = request.execute()
                 data["items"].extend(response.get("items", []))
                 page_token = response.get("nextPageToken")
@@ -246,8 +315,7 @@ def extract_channel_data(
                 }
             else:
                 break
-
-    return data
+    yield data
 
 
 def perform_sentiment_analysis(text: str) -> float:
@@ -267,24 +335,32 @@ def perform_sentiment_analysis(text: str) -> float:
     """
     # Initialize VADER sentiment analyzer
     sid = SentimentIntensityAnalyzer()
+
     # Perform sentiment analysis
     sentiment_score = sid.polarity_scores(text)["pos"]
     return sentiment_score
 
 
-def transform_comment_thread_data(comment_thread_data: dict) -> pd.DataFrame:
+def transform_comment_thread_data(
+    comment_thread_data: dict,
+) -> Generator[tuple[str, pd.DataFrame], None, None]:
     """
     Transform the comment_thread_data into a useable dataframe.
+    Parameters
+
     Parameters
     ----------
     comment_thread_data : dict
         A dictionary containing the comment thread data.
 
-    Returns
-    -------
-    pd.DataFrame
-        A useble dataframe
+    Yields
+    ------
+    Generator[tuple[str, pd.DataFrame], None, None]
+        A tuple pair (key, df) that contains the type of data and a
+        useable dataframe.
     """
+
+    print("in transform_comment_thread_data")
     data = []
     for item in comment_thread_data.get("items", []):
         for comment_item in item.get("items", []):
@@ -304,22 +380,31 @@ def transform_comment_thread_data(comment_thread_data: dict) -> pd.DataFrame:
     df = pd.DataFrame(data, columns=["Channel_Id", "Score"])
     grouped_data = df.groupby("Channel_Id")["Score"].mean()
     result_df = grouped_data.reset_index()
-    return result_df
+    yield ("comment_thread_data", result_df)
 
 
-def transform_channel_data(query: str, channel_data: dict) -> pd.DataFrame:
+@use("query")
+def transform_channel_data(
+    channel_data: dict, query: str
+) -> Generator[tuple[str, pd.DataFrame], None, None]:
     """
     Transform the channel_data into a useable dataframe.
+
     Parameters
     ----------
-    comment_thread_data : dict
+    channel_data : dict
         A dictionary containing the channel data.
+    query : str
+        A query string that maps to the q value in the youtube api.
 
-    Returns
-    -------
-    pd.DataFrame
-        A useble dataframe
+    Yields
+    ------
+    Generator[tuple[str, pd.DataFrame], None, None]
+        A tuple pair of (key, df) signifying the thype of data and a
+        useable dataframe.
     """
+
+    print("in transform_channel_data")
     data = []
     for channel_item in channel_data.get("items", []):
         channel_id = channel_item.get("id", "")
@@ -327,7 +412,7 @@ def transform_channel_data(query: str, channel_data: dict) -> pd.DataFrame:
         url = f"https://www.youtube.com/{custom_url}"
         title = channel_item.get("snippet", {}).get("title", "")
         description = channel_item.get("snippet", {}).get("description", "")
-        sim_score = fuzzy_similarity(query, description)
+        sim_score = fuzzy_similarity(query, f"{title} : {description}")
         video_count = channel_item.get("statistics", {}).get("videoCount", "")
         subscriber_count = channel_item.get("statistics", {}).get(
             "subscriberCount", ""
@@ -355,12 +440,10 @@ def transform_channel_data(query: str, channel_data: dict) -> pd.DataFrame:
             "Similarity",
         ],
     )
-    return df
+    yield ("channel_data", df)
 
 
-def transform_data(
-    query: str, comment_thread_data: dict, channel_data: dict
-) -> pd.DataFrame:
+def transform_data() -> pd.DataFrame:
     """
     Tranforms the extracted data into a single dataframe.
 
@@ -381,9 +464,9 @@ def transform_data(
         A combined dataframe with elements from the channel and comment threads.
     """
 
-    comment_thread_df = transform_comment_thread_data(comment_thread_data)
+    comment_thread_df = KV_STORE["comment_thread_data"]
 
-    channel_df = transform_channel_data(query, channel_data)
+    channel_df = KV_STORE["channel_data"]
 
     combined_df = pd.merge(channel_df, comment_thread_df, on="Channel_Id")
     combined_df["Videos_Rank"] = combined_df["Videos"].rank(
@@ -446,6 +529,38 @@ def fuzzy_similarity(str1: str, str2: str) -> float:
     return best_ratio
 
 
+def get_services(query: str) -> dict[str, Any]:
+    """
+    Method used to pass global data and services into graph.
+
+    Parameters
+    ----------
+    query : str
+        The query string that is mapped to a q value in the youtube api call.
+
+    Returns
+    -------
+    dict[str, Any]
+        Returns a dictionary of services for a graph.
+    """
+    return {"query": query}
+
+
+def store_results(key: str, df: pd.DataFrame):
+    """
+    Store transform results for final processing.
+
+    Parameters
+    ----------
+    key : str
+        The type of data (channel_data or comment_thread_data)
+    df : pd.DataFrame
+        The dataframe output by the transform function.
+    """
+    global KV_STORE
+    KV_STORE[key] = df
+
+
 def main(query: str):
     """
     Main method
@@ -460,26 +575,29 @@ def main(query: str):
     # *DO NOT* leave this option enabled in production.
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
 
-    api_service_name = "youtube"
-    api_version = "v3"
-    api_key = os.environ.get("DEVELOPER_KEY")
-
+    # Download NLTK plug-ins
     download()
 
-    youtube = googleapiclient.discovery.build(
-        api_service_name, api_version, developerKey=api_key
+    # Create the Bonobo graph
+    graph = bonobo.Graph()
+    graph.add_chain(extract_search_data)
+    graph.add_chain(store_results, _input=None)
+    graph.add_chain(
+        extract_channel_data,
+        transform_channel_data,
+        store_results,
+        _input=extract_search_data,
     )
-
-    search_data = extract_search_data(youtube, query)
-    comment_thread_data = extract_comment_thread_data(youtube, search_data)
-    channel_data = extract_channel_data(youtube, search_data)
-
-    df = transform_data(query, comment_thread_data, channel_data)
-    print(
-        tabulate(
-            df, headers=df.columns.tolist(), tablefmt="grid"  # type: ignore
-        )
+    graph.add_chain(
+        extract_comment_thread_data,
+        transform_comment_thread_data,
+        store_results,
+        _input=extract_search_data,
     )
+    bonobo.run(graph, services=get_services(query))
+
+    # Combine results of both chains in the graph.
+    df = transform_data()
     return df
 
 
