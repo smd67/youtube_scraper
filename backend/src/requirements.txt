@@ -29,7 +29,7 @@ Levenshtein==0.25.1
 MarkupSafe==2.1.5
 marshmallow==3.22.0
 mondrian==0.8.1
-mypy==1.16.1
+mypy==1.14.1
 mypy_extensions==1.1.0
 nltk==3.9.1
 numpy==1.24.4
