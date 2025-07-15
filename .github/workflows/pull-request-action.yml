@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5 # Action to set up Python
         with:
-          python-version: '3.9.21' # Specify your desired Python version
+          python-version: '3.8.20' # Specify your desired Python version
 
       - name: Install requirements
         run: pip install -r backend/src/requirements.txt
