@@ -122,7 +122,6 @@ def do_query(query: Query) -> list[Row]:
         This is the query string to search for. It gets used as the q parameter
         to the YouTube data API.
 
-
     Returns
     -------
     list[Row]
