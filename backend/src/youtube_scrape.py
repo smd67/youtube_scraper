@@ -489,6 +489,7 @@ def transform_data() -> pd.DataFrame:
     ) / 4.0
 
     combined_df = combined_df.sort_values(by="Average_Rank")
+
     return combined_df
 
 

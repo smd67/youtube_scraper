@@ -1,8 +1,12 @@
 # Use an official Python runtime as a parent image
-FROM python:3.9-slim-buster
+FROM python:3.9
 
 ARG DEVELOPER_KEY=
 ENV DEVELOPER_KEY=$DEVELOPER_KEY
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    python3-dev
 
 # Set the working directory in the container
 WORKDIR /backend/src

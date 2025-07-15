@@ -68,7 +68,7 @@
         try {
           this.isLoading = true;
           const response = await axios.post(apiUrl, requestBody, config);
-          this.titles = response.data.map(obj => obj.Title.slice(0, 10));
+          this.titles = response.data.map(obj => obj.Title.slice(0, 20));
           this.videos = response.data.map(obj => obj.Videos);
           this.subscribers = response.data.map(obj => obj.Subscribers);
           this.sentiment = response.data.map(obj => obj.Score);
