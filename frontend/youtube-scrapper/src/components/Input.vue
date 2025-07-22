@@ -26,6 +26,6 @@
 }
 .my-input {
   height: 30px;
-  width: 500px;
+  width: 400px;
 }
 </style>

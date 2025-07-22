@@ -4,12 +4,6 @@
       <div class="my-division">
         <Input @button-clicked="fetchTableData" @data-sent="handleData"/>
       </div>
-      <div class="my-grid" v-if="tableData.length > 0">
-        <div class="grid-item"><BarChart id="1" dataset_label="Videos" dataset_color="red" :labels="titles" :data="videos"/></div>
-        <div class="grid-item"><BarChart id="2" dataset_label="Subscribers" dataset_color="blue" :labels="titles" :data="subscribers"/></div>
-        <div class="grid-item"><BarChart id="3" dataset_label="Sentiment" dataset_color="green" :labels="titles" :data="sentiment" /></div>
-        <div class="grid-item"><BarChart id="3" dataset_label="Relevance" dataset_color="orange" :labels="titles" :data="relevance" /></div>
-      </div>
       <div class="spinner" v-if="isLoading"></div>
       <div>
         <table v-if="tableData.length > 0">
@@ -35,10 +29,9 @@
   <script>
   import axios from 'axios';
   import Input from './Input.vue';
-  import BarChart from './BarChart.vue';
 
   export default {
-    components: { Input, BarChart},
+    components: { Input },
     data() {
       return {
         tableData: [], // This array will store the fetched data
@@ -74,6 +67,12 @@
           this.sentiment = response.data.map(obj => obj.Score);
           this.relevance = response.data.map(obj => obj.Similarity);
           this.tableData = response.data; // Assign the fetched data to tableData
+          this.$emit('table-data-fetched', {
+            titles: this.titles, 
+            videos: this.videos, 
+            subscribers: this.subscribers, 
+            sentiment: this.sentiment, relevance: this.relevance
+          });
         } catch (error) {
           console.error('Error fetching data:', error);
         } finally {
@@ -99,20 +98,8 @@
     background-color: #f2f2f2;
   }
   .my-division {
-    padding-top: 30px;
+    padding-top: 90px;
     padding-bottom: 30px;
-  }
-  .my-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 columns, equal width */
-      grid-template-rows: repeat(2, auto); /* 2 rows, height determined by content */
-      gap: 10px; /* Adjust as needed for spacing */
-      padding-bottom: 30px;
-    }
-  .grid-item {
-    /* Optional: Add styling for individual grid items */
-    border: 1px solid #ccc;
-    padding: 10px;
   }
   .spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);

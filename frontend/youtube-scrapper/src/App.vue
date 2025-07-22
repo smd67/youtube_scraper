@@ -1,21 +1,42 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import DataTable from './components/DataTable.vue';
-</script>
-
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/youtube_logo.png" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="YouTube Channel Recommender" />
+      <HelloWorld msg="YouTube Channel Recommender" :titles="titles" :videos="videos" :subscribers="subscribers" :sentiment="sentiment" :relevance="relevance" />
     </div>
   </header>
 
   <main>
-    <DataTable />
+    <DataTable @table-data-fetched="handleTableData" />
   </main>
 </template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+import DataTable from './components/DataTable.vue';
+
+export default {
+    components: { HelloWorld, DataTable },
+    data() {
+      return {
+        titles: [],
+        videos: [],
+        subscribers: [],
+        sentiment: [],
+        relevance: []
+      };
+    },
+    methods: {
+      handleTableData(data){
+        this.titles = data.titles;
+        this.videos = data.videos;
+        this.subscribers = data.subscribers;
+        this.sentiment = data.sentiment;
+        this.relevance = data.relevance;
+      }
+    }
+};
+</script>
 
 <style scoped>
 header {

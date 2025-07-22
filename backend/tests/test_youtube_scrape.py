@@ -187,7 +187,7 @@ def test_transform_data(use_mock: MagicMock):
     with patch("backend.src.youtube_scrape.KV_STORE", kv_store_mock):
         df = transform_data()
 
-    assert len(df) == 2
+    assert len(df) == 30
     assert all(
         [score >= 0.0 and score <= 1.0 for score in df["Score"].to_list()]
     )
@@ -492,7 +492,7 @@ def test_main(
     }
     with patch("backend.src.youtube_scrape.KV_STORE", kv_store_mock):
         df = main("dodgers")
-        assert len(df) == 2
+        assert len(df) == 30
         assert all(
             [score >= 0.0 and score <= 1.0 for score in df["Score"].to_list()]
         )

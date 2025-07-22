@@ -5,7 +5,8 @@
 <script>
   import { Bar } from 'vue-chartjs';
   import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js';
-  
+  import { palettes } from './palettes.js'
+
   ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale);
   
   export default {
@@ -20,9 +21,9 @@
         type: String,
         default: "Sales",
       },
-      dataset_color: {
+      palette: {
         type: String,
-        default: '#f87979',
+        default: "school_bust",
       },
       labels: {
         type: Array,
@@ -35,24 +36,39 @@
     },
     data() {
       return {
+        palettes: palettes,
         chartOptions: {
           responsive: true,
-          maintainAspectRatio: false
+          maintainAspectRatio: false,
+          indexAxis: 'y',
+          
+          plugins: {
+            legend: {
+              display: false
+            },
+            title: {
+              display: true, // Set to true to display the title
+              text: this.dataset_label, // The actual title text
+              font: {
+                style: 'italic',
+                weight: 'bold',
+              }
+            }
+          }
         },
       };
     },
     computed: {
-        chartData() {
+        chartData() {   
           return {
-          labels: this.labels,
-          datasets: [
-            {
-              label: this.dataset_label,
-              backgroundColor: this.dataset_color,
-              data: this.data,
-            },
-          ],
-        }
+            labels: this.labels,
+            datasets: [
+              {
+                backgroundColor: this.palettes[this.palette],
+                data: this.data,
+              },
+            ],
+          }
       }
     }
   };

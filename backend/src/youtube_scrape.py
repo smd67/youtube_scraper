@@ -146,6 +146,7 @@ def do_query(query: Query) -> List[Row]:
     print("=================")
     print(json_data)
     print("=================")
+
     return [Row(**row_dict) for row_dict in json_data]
 
 
@@ -477,7 +478,14 @@ def transform_data() -> pd.DataFrame:
     comment_thread_df = KV_STORE[ChainType.COMMENT_THREAD_DATA]
     channel_df = KV_STORE[ChainType.CHANNEL_DATA]
 
-    combined_df = pd.merge(channel_df, comment_thread_df, on="Channel_Id")
+    combined_df = pd.merge(
+        channel_df, comment_thread_df, how="left", on="Channel_Id"
+    )
+    combined_df["Videos"] = combined_df["Videos"].fillna(0)
+    combined_df["Subscribers"] = combined_df["Subscribers"].fillna(0)
+    combined_df["Score"] = combined_df["Score"].fillna(0.0)
+    combined_df["Similarity"] = combined_df["Similarity"].fillna(0.0)
+
     combined_df["Videos_Rank"] = combined_df["Videos"].rank(
         method="dense", ascending=False
     )
